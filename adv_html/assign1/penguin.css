@@ -1,0 +1,30 @@
+body {
+	max-width: 600px;
+	font-family: serif;
+}
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+img {
+	border: none;
+}
+p {
+	text-align: center;
+}
+p#mission {
+	font-style: italic;
+}
+img#gentoo {
+	height: 600px;
+	width: 563px;
+}
+#valid_xhtml {
+	float: left;
+	clear: both;
+}
+#valid_css {
+	float: left;
+}
