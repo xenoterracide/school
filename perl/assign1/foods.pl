@@ -13,3 +13,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+print "name one of your favorite foods: ";
+$fav_food = <>;
+print "you like, $fav_food";
