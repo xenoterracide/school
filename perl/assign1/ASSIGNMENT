@@ -4,3 +4,12 @@ Exercise 3 (page 98): Problem 5,6.
 
 Submission: . First show me in the class and then submit your source code 
 through Blackboard.
+
+#1) write a script called foods that will ask the user for his favorite foods.  
+ask for at least 5 foods. the list of foods will be stored in a scalar. (at 
+this time you have no way to check how many foods are entered. don't worry 
+about this.)
+	a.)split the scalar and create an array.
+	b.)print the array.
+	c.)print each of the elements of the array.
+	d.)print the number of elements in the array.
