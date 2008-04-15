@@ -1,0 +1,151 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on HTML and XHTML
+   Tutorial 7
+   Tutorial Case
+
+   CSS Positioning Demo
+   Author: Patrick Carey
+   Date:   6/1/2004
+
+   Filename:         demo_css_positioning.htm
+   Supporting files: demo.gif
+-->
+<title>CSS Positioning Demo</title>
+<style type="text/css">
+   body {background-color:white; font-family: Arial, Helvetica, sans-serif}
+   h2 {color:yellow; background-image: url(demo.gif); letter-spacing: 1em;
+       font-size: 1.5em; padding: 10px; margin-bottom: 0; text-align: right}
+   p {font-size: 0.8em; padding: 10 30 10 30; border: solid 1px black; margin-top:0; background-color: ivory}
+
+   address {text-align: center; font-size: 8pt; border-top: 1px solid black; clear:right; font-style: normal;
+            margin-top: 15px}
+   span.btitle {font-style: italic}
+   #form {float: right}
+   #outer {width: 150; height: 150; background-color: red; border: 5px outset red}
+   #inner {width: 50; height: 50; background-color: yellow; border: 5px outset yellow}
+   #flow {width: 300; height: 50; border: 1px dotted black; margin-top: 10px}
+</style>
+<script type="text/javascript">
+function moveit() {
+ outerbox=document.getElementById("outer");
+ innerbox=document.getElementById("inner");
+
+ opindex=document.csspform.outerpos.selectedIndex;
+ ipindex=document.csspform.innerpos.selectedIndex;
+ oppos=document.csspform.outerpos.options[opindex].value;
+ ippos=document.csspform.innerpos.options[ipindex].value;
+
+
+ if (oppos != "static") {
+    outerbox.style.position=oppos;
+    outerbox.style.top=document.csspform.outertop.value+"px";
+    outerbox.style.left=document.csspform.outerleft.value+"px";
+    document.csspform.outertop.disabled=false;
+    document.csspform.outerleft.disabled=false;
+ } else {
+    outerbox.style.position="";
+    outerbox.style.top="0px";
+    outerbox.style.left="0px";
+    document.csspform.outertop.disabled=true;
+    document.csspform.outerleft.disabled=true;
+ }
+   
+ if (ippos != "static") {
+    innerbox.style.position=ippos;
+    innerbox.style.top=document.csspform.innertop.value+"px";
+    innerbox.style.left=document.csspform.innerleft.value+"px";
+    document.csspform.innertop.disabled=false;
+    document.csspform.innerleft.disabled=false;
+ } else {
+    innerbox.style.position="";
+    innerbox.style.top="0px";
+    innerbox.style.left="0px";
+    document.csspform.innertop.disabled=true;
+    document.csspform.innerleft.disabled=true;
+ }  
+}
+
+function resetform() {
+ document.csspform.outerpos.selectedIndex=0;
+ document.csspform.innerpos.selectedIndex=0;
+ document.csspform.outertop.value="0";
+ document.csspform.outerleft.value="0"
+ document.csspform.outertop.disabled=true;
+ document.csspform.outerleft.disabled=true;
+ document.csspform.innertop.value="0";
+ document.csspform.innerleft.value="0"
+ document.csspform.innertop.disabled=true;
+ document.csspform.innerleft.disabled=true;
+ moveit();
+}
+</script>
+
+</head>
+
+<body>
+<h2>CSS Positioning</h2>
+<p>This page demonstrates how different position styles affect layout. Select position
+values from the selection lists and input boxes below. The first column of input fields sets the position of the larger red box. The second column of input fields sets the position of the smaller yellow box. To reset all the two colored boxes to their default positions, click the
+<b>reset</b> button. The position of the dotted paragraph can not be set, but it may change
+in relation to the movements of the two colored boxes.</p>
+<div id="form">
+   <form name="csspform" id="csspform">
+   <table cellspacing="2" style="border-left: 1px solid black">
+   <tr><td></td>
+      <th colspan="2" style="color: blue">Positioning Styles</th>
+   </tr>
+   <tr><td></td>
+      <th style="background-color: red; color: white">outer</th>
+      <th style="background-color: yellow; color: black">inner</th>
+   </tr>
+   <tr><td style="text-align: right">position:</td>
+       <td style="background-color: red"><select name="outerpos" id="outerpos" onchange="moveit()">
+              <option value="static" selected="selected">static</option>
+              <option value="absolute">absolute</option>
+              <option value="relative">relative</option>
+              <option value="fixed">fixed</option>
+              <option value="inherit">inherit</option>
+           </select></td>
+       <td style="background-color: yellow"><select name="innerpos" id="innerpos" onchange="moveit()">
+              <option value="static" selected="selected">static</option>
+              <option value="absolute">absolute</option>
+              <option value="relative">relative</option>
+              <option value="fixed">fixed</option>
+              <option value="inherit">inherit</option>
+           </select></td>
+   </tr>
+   <tr><td style="text-align: right">top:</td>
+       <td style="background-color: red"><input name="outertop" id="outertop"  disabled="disabled" value="0" size="5"             style="text-align: right" onchange="moveit()" /></td>
+       <td style="background-color: yellow"><input name="innertop" id="innertop"  disabled="disabled" value="0" size="5"             style="text-align: right" onchange="moveit()" /></td>
+   </tr>
+   <tr><td style="text-align: right">left:</td>
+       <td style="background-color: red"><input name="outerleft" id="outerleft"  disabled="disabled" value="0" size="5"             style="text-align: right" onchange="moveit()" /></td>
+       <td style="background-color: yellow"><input name="innerleft" id="innerleft"  disabled="disabled" value="0" size="5"             style="text-align: right" onchange="moveit()" /></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td colspan="2" style="text-align: center">
+          <input type="button" value="   reset   " onclick="resetform()" />
+      </td>
+   </tr>
+   </table>
+   </form>
+</div>
+<div id="outer">
+   <div id="inner">
+   </div>
+</div>
+<p id="flow">
+Sample paragraph.
+</p>
+<address>
+Carey, P.
+<span class="btitle">New Perspectives on HTML and XHTML</span>,
+Course Technology: Boston, 2004.
+</address>
+</body>
+</html>
+
+

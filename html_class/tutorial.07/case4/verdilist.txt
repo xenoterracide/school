@@ -1,0 +1,30 @@
+List of Verdi's Operas
+=======================
+
+1839  Oberto Conte di San Bonifacio
+1840  Un Giorno di Regno
+1842  Nabucco  
+1843  I Lombardi alla Prima Crociata  
+1844  Ernani
+1844  I Due Foscari
+1845  Giovanna d' Arco
+1845  Alzira
+1846  Attila
+1847  Macbeth
+1847  I Masnadieri
+1848  Il Corsaro
+1849  Luisa Miller
+1850  Stiffelio
+1851  Rigoletto
+1853  Il Trovatore
+1853  La Traviata
+1855  Les Vêpres Siciliennes
+1857  Simone Boccanegra
+1859  Un Ballo in Maschera
+1863  La Forza del Destino 
+1867  Don Carlos
+1871  Aida
+1887  Otello
+1893  Falstaff
+
+
