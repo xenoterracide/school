@@ -16,3 +16,13 @@ output should resemlble the following:
 salary: 14500
 name: betty boop
 phone: 245-836-8357
+
+5.) given the array: @names=qw(Nick Susan Chet Dolly Bill), write a statement 
+that would
+	a.) replace susan and chet with ellie, beatrice, and charles
+	b.) remove bill from the array.
+	c.) add lewis and izzy to the end of the array
+	d.) remove nick from the beginning of the array.
+	e.) reverse the array.
+	f.) add archie to the beginning of the array.
+	g.) sort the array
