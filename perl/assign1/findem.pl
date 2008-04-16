@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+#(c) Caleb Cushing, 2008, License GPLv3
 print "who are you searcing for? ";
 chomp($search=<STDIN>);
 print "search: $search\n";
