@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-use warnings; use strict;
-print $_
+use warnings;
+print "$_";
 print "who are you searcing for? ";
 chomp($search=<STDIN>);
 print "search: $search\n";
