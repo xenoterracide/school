@@ -1,8 +1,8 @@
 #!/usr/bin/perl
-
+use warnings; use strict;
+print $_
 print "who are you searcing for? ";
-$search=<STDIN>;
-chomp($search);
+chomp($search=<STDIN>);
 print "search: $search\n";
 while(my $line = <>) {
 	@fields = split(":", $line);
