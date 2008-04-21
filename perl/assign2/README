@@ -1,3 +1,13 @@
 Due Date: April 22, 2008
 Exercise-4 (page 131): Problem 8
+(actually on page 132)
+	Create an array of five sayings:
+	"an apple a day keeps the docor away"
+	"procrastination is a thief in time"
+	"the early bird catches the worm"
+	"handsome is is handsome does"
+	"too many cooks spoil the broth"
+
+	each time your, a random saying will be printed. hint: the index of the 
+	array will be the random number generated
 Exercise-5 (page 161): Problem 1
