@@ -2,7 +2,7 @@ Chapter 4 Assignment RQ
 
 1.)shutdown db, copy the file, update init.ora, restart db
 3.)to insure against the total loss of the file
-6.)
+6.)archive log automatically archives redo logs. no archive log is the opposite
 7.)
 13.)
 
