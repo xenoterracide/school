@@ -1,4 +1,5 @@
 Due Date: April 22, 2008
+
 Exercise-4 (page 131): Problem 8
 (actually on page 132)
 	Create an array of five sayings:
@@ -10,6 +11,7 @@ Exercise-4 (page 131): Problem 8
 
 	each time your, a random saying will be printed. hint: the index of the 
 	array will be the random number generated
+
 Exercise-5 (page 161): Problem 1
 	physicists tell us that the lowest possible temperature is absolute zero.  
 	absolute zero is -459.69 (note: actually the most current number I can find 
