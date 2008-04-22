@@ -18,7 +18,7 @@ Exercise-5 (page 161): Problem 1
 	is -459.67 which suggests the book was never right) degress Fahrenheit.
 	a.) Accept input from the user: a beginning temperature, an ending
 		temperature, and an increment (all fahrenheit).
-	b.) check for bad input: at temp less than absolute zere and an ending
+	b.) check for bad input: at temp less than absolute zero and an ending
 		temperature less than a beginning temperature. the program will send a 
 		message to stderr if either condition is detected. the program will 
 		send a message to stderr if either condition is detected.
