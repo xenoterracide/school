@@ -7,8 +7,26 @@
 		http-equiv="Content-Type"
 		content="text/html";
 		charset="utf-8">
-</title>
-<body>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="test.css">
+	<script type="text/javascript">
+		funcion adjustIFrameSize(id) {
+			var myIframe = document.getElementById(id);
+			if myframe) {
+				if (myIframe.contentDocument &&
+						myIframe.contentDocument.body.offsetHeight) {
+			// W3C DOM (and mozilla) syntax
+					myIframe.height =
+					myIframe.contentDocument.body.offsetHeight);
+				} else if (myIframe.Document &&
+					myIframe.Document.body.scrollHeight;
+			}
+		}
+	</script>
+</head>
+<body onload="adjustIFrameSize('content');">
 	<div id="nav">
 		<ul>
 			<li>Mammals</li>
@@ -18,8 +36,18 @@
 			<li>Insects</li>
 			<li>Arachnids</li>
 			<li>Reptiles</li>
+		</ul>
 	</div>
 	<h1>Animals of the World</h1>
-
+<div>
+	<iframe
+		id="content"
+		name="content"
+		src="platypus.html"
+		height="2000"
+		width="80%"
+		>
+	</iframe>
+</div>
 </body>
 </html>
