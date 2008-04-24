@@ -11,22 +11,8 @@
 		rel="stylesheet"
 		type="text/css"
 		href="test.css">
-	<script type="text/javascript">
-		funcion adjustIFrameSize(id) {
-			var myIframe = document.getElementById(id);
-			if myframe) {
-				if (myIframe.contentDocument &&
-						myIframe.contentDocument.body.offsetHeight) {
-			// W3C DOM (and mozilla) syntax
-					myIframe.height =
-					myIframe.contentDocument.body.offsetHeight);
-				} else if (myIframe.Document &&
-					myIframe.Document.body.scrollHeight;
-			}
-		}
-	</script>
 </head>
-<body onload="adjustIFrameSize('content');">
+<body>
 	<div id="nav">
 		<ul>
 			<li>Mammals</li>
