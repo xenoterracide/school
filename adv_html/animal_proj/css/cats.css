@@ -10,6 +10,10 @@ body {
  text-align: center;
  }
 
+#divimg #two {
+ display:none;
+ } 
+ 
 #bar-top {
  width: 100%; 
  height: 30px; 
@@ -40,6 +44,7 @@ body {
 
 #myTable {
  font-weight: bold;
+ clear: left;
  }
 
 p {
