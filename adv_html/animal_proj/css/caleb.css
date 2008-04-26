@@ -17,6 +17,6 @@ div#nav>ul {
 }
 iframe#content {
 	border: none;
-	overflow: visible;
+	overflow: hidden;
 	width: 800px;
 }
