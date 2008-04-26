@@ -18,5 +18,8 @@ div#nav>ul {
 iframe#content {
 	border: none;
 	overflow: hidden;
-	width: 800px;
+	width: 80%;
+}
+p {
+	margin: 1em;
 }
