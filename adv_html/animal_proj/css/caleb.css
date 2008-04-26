@@ -16,7 +16,7 @@ div#nav>ul {
 	list-style-type: none;
 }
 iframe#content {
-	width:  800px;
-	height: 600px;
 	border: none;
+	overflow: visible;
+	width: 800px;
 }

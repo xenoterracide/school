@@ -10,8 +10,26 @@
 		rel="stylesheet"
 		type="text/css"
 		href="css/caleb.css">
+	<script type="text/javascript">
+		function adjustIFrameSize(id) {
+			var myIframe = document.getElementById(id);
+			if (myIframe) {
+				if (myIframe.contentDocument
+						&& myIframe.contentDocument.body.offsetHeight) {
+					// W3C DOM (and Mozilla) syntax
+					myIframe.height = 
+					myIframe.contentDocument.body.offsetHeight;
+				}
+				else if (myIframe.Document &&
+					myIframe.Document.body.scrollHeight) {
+					// IE DOM syntax
+					myIframe.height = myIframe.Document.body.scrollHeight;
+				}
+			}
+		}
+	</script>
 </head>
-<body>
+<body onload="adjustIFrameSize('content');">
 <h1>Animals of the World</h1>
 <div id="nav">
 	<ul>
@@ -28,11 +46,12 @@
 	</ul>
 </div>
 
-<div>
+<div id="iframe">
 	<iframe
 		id="content"
 		name="content"
-		src="platypus.html">
+		src="platypus.html"
+		scrolling="no">
 	</iframe>
 </div>
 </body>
