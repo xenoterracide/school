@@ -2,5 +2,8 @@
 
 while(my $line = <>) {
 	($name, $phone, $address, $bday, $salary) = split(":", $line);
-	print if $name =~ tr/Ephram/A-Z/;
+	if ( $name =~ /Ephram/ ) {
+		$name = uc($name);
+		print "$name\n";
+	}
 }
