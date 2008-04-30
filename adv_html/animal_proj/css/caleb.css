@@ -8,13 +8,6 @@ body {
 h1 {
   text-align: center;
 }
-div#nav {
-  float: left;
-  padding: 5px;
-}
-div#nav.ul {
-  list-style-type: none;
-}
 iframe#content {
   border: none;
   overflow: hidden;
