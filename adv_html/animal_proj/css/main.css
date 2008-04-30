@@ -1,0 +1,15 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+  width: 800;
+}
+iframe#content {
+  border: none;
+  overflow: hidden;
+  width: 80%;
+}
+div#nav {
+	float: left;
+}
