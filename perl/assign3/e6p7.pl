@@ -1,5 +1,7 @@
 #!/usr/bin/perl
-
+use warnings;
 while(my $line = <>) {
-	print $line if $line != /4/;
+	if ( $line != m/4/ ) {
+		print "$line\n";
+	}
 }
