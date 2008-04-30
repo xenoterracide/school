@@ -17,6 +17,10 @@
 		media="screen"
 		title="cats"
 		href="css/cats.css">
+	<script
+		type="text/javascript"
+		src="js/ccImageSwitcher.js">
+	</script>
 </head>
 <body>
 <h2>Platypus</h2>
@@ -52,9 +56,13 @@ border="1">
 		<td>Least Concern</td>
 	</tr>
 </table>
-<div>
-	<a href="#n" onclick="switchImg('images/platypus1.jpg')">1</a>
-	<a href="#n" onclick="switchImg('images/platypus2.jpg')">2</a>
+<div class="anim_img">
+	<img
+		src="images/platypus1.jpg"
+		alt="platypus in water"
+		name="img">
+	<a href="#img" onclick="swap(1, 'img')">1</a>
+	<a href="#img" onclick="swap(2, 'img')">2</a>
 </div>
 <p>
 	The Platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to 
