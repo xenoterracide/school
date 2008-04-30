@@ -2,16 +2,8 @@
   margin: 0px;
   padding: 0px;
 }
-body {
-  width: 800;
-}
 h1 {
   text-align: center;
-}
-iframe#content {
-  border: none;
-  overflow: hidden;
-  width: 80%;
 }
 p {
   margin: 1em;
