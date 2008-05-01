@@ -7,7 +7,7 @@ body {
  padding:0;
  background: #D6BF86;
  color: #000000;
- text-align: center;
+overflow: auto;
  }
 
 #divimg #two {
@@ -26,13 +26,13 @@ body {
 }
 
 #content { 
- height: 600px; 
+ height: 650px;
  position:relative;
  border: solid #D6BF86; 
  border-width: 0px 2px; 
  background: #FFFBD0;
  color: #333333;
- overflow: auto;
+ 
 
  }
 
@@ -44,10 +44,10 @@ body {
  } 
 
 #myTable {
- font-weight: bold;
+  font-weight: bold;
  border-color: #9C2A00;
- text-align: center;
- }
+ margin:1em;
+  }
 
 p {
  margin:0;
