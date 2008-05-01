@@ -1,3 +1,56 @@
-div#nav {
-	float: left;
+#nav {
+    float: left;
+}
+#nav ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    text-indent:0px;
+}
+#nav li {
+	font-weight: bold;
+	font-size: 11pt;
+    height:24px;
+    line-height:20px;
+    width:180px;
+}
+#nav li {
+    width:180px;
+}
+#nav li ul li {
+    width:150px;
+}
+#nav li.category {
+    padding-left:10px;
+    height:auto;
+    color: black;
+}
+/*IE needs extra margin and padding set for the indented li */
+* html #nav li ul li {
+    margin-left:-10px;
+    padding-left:10px;
+}
+/* end IE hack */
+
+#nav li a,
+#nav li ul li a {
+    font-weight:normal;
+    color: #9C2A00;
+    text-decoration:none;
+    display:block;
+     padding-left:10px;
+}
+#nav li.category ul li a {
+    margin-left:-10px;
+    padding-left:30px;
+}
+#nav li a:link,
+#nav li a:visited {
+    color: #9C2A00;
+    text-decoration:none;
+}
+#nav li a:hover,
+#nav li a:active {
+	color: #9C2A00;
+    text-decoration:none;
 }
