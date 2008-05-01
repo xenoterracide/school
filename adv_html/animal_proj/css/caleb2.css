@@ -2,6 +2,8 @@
   margin: 0px;
   padding: 0px;
 }
+
+
 body {
   width: 800;
 }
@@ -18,8 +20,9 @@ div#nav.ul {
 iframe#content {
   border: none;
   overflow: hidden;
-  width: 80%;
-}
+  width: 750px;
+  }
+  
 p {
   margin: 1em;
 }
