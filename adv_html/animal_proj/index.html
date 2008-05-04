@@ -1,52 +1,95 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<title>Animals of the World</title>
 	<meta
 		http-equiv="Content-Type"
-		content="text/html";
-		charset="utf-8">
+		content="text/html; charset=utf-8">
 	<link
 		rel="stylesheet"
 		type="text/css"
-		href="test.css">
-	<script type="text/javascript">
-		funcion adjustIFrameSize(id) {
-			var myIframe = document.getElementById(id);
-			if myframe) {
-				if (myIframe.contentDocument &&
-						myIframe.contentDocument.body.offsetHeight) {
-			// W3C DOM (and mozilla) syntax
-					myIframe.height =
-					myIframe.contentDocument.body.offsetHeight);
-				} else if (myIframe.Document &&
-					myIframe.Document.body.scrollHeight;
-			}
-		}
+		media="screen"
+		title="main"
+		href="css/nav.css">
+	<link
+		rel="stylesheet"
+		type="text/css"
+		media="screen"
+		title="main"
+		href="css/main.css">
+	<script
+		type="text/javascript"
+		src="js/iframe_resize.js">
 	</script>
 </head>
 <body onload="adjustIFrameSize('content');">
-	<div id="nav">
-		<ul>
-			<li>Mammals</li>
-			<li>Amphibians</li>
-			<li>Birds</li>
-			<li>Aquatic</li>
-			<li>Insects</li>
-			<li>Arachnids</li>
-			<li>Reptiles</li>
-		</ul>
-	</div>
-	<h1>Animals of the World</h1>
-<div>
+<h1>Animals of the World</h1>
+<div id="nav">
+  <ul>
+    <li class="category">Aves (Birds)
+    <ul>
+        <li><a href="penguin.html" target="content">Penguin</a></li>
+        <li><a href="ostrich.html" target="content">Ostrich</a></li>
+        </ul>    
+    </li>
+    <li class="category">Mammalia (Mammals)
+      <ul>
+        <li><a href="lion.html" target="content" onclick="adjustIFrameSize('content');">African Lion</a></li>
+        <li><a href="tiger.html" target="content" onclick="adjustIFrameSize('content');">Siberian Tiger</a></li>
+        <li><a href="leopard.html" target="content" onclick="adjustIFrameSize('content');">Leopard</a></li>
+		<li>
+			<a
+				href="platypus.html"
+				target="content"
+				onclick="adjustIFrameSize('content');"
+				>Platypus</a>
+		</li>
+      </ul>
+    </li>
+    <li class="category">Sauropsida (Reptiles)
+    <ul>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+      </ul>    
+    </li>
+    <li class="category">Amphibians
+    <ul>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+      </ul>    
+    </li>
+    <li class="category">Aquatic
+    <ul>
+        <li><a href="Platypus.html" target="content">Platypus</a></li>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+      </ul>    
+    </li>
+    <li class="category">Insects
+    <ul>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+      </ul>    
+    </li>
+    <li class="category">Arachnids
+    <ul>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+        <li><a href="page" target="content">animal</a></li>
+      </ul>    
+    </li>
+    </ul>
+</div>
+<div id="iframe">
 	<iframe
 		id="content"
 		name="content"
 		src="platypus.html"
-		height="2000"
-		width="80%"
-		>
+		scrolling="no">
 	</iframe>
 </div>
 </body>

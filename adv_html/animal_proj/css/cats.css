@@ -7,8 +7,8 @@ body {
  padding:0;
  background: #D6BF86;
  color: #000000;
- text-align: center;
- }
+ overflow: auto;
+}
 
 #divimg #two {
  display:none;
@@ -16,37 +16,34 @@ body {
  
 #bar-top {
  width: 100%; 
- height: 30px; 
+ height: 10%; 
  background: #9C2A00;
  color: #FFFBD0;
  border: solid #D6BF86;
  border-width: 2px 0; 
  margin: 0;
+ text-align: center;
 }
 
 #content { 
- height: 600px; 
+ height: 650px;
  position:relative;
  border: solid #D6BF86; 
  border-width: 0px 2px; 
  background: #FFFBD0;
  color: #333333;
- overflow: auto;
-
- }
-
+}
 #divimg {
  float:right;
  margin:5px 5px 15px 20px;
  border:1px solid black;
  text-align:center;
- } 
-
+} 
 #myTable {
  font-weight: bold;
- clear: left;
- }
-
+ border-color: #9C2A00;
+ margin:1em;
+}
 p {
  margin:0;
  padding:10px 20px 0px 20px;
@@ -56,7 +53,7 @@ p {
 p:first-letter {
  font-size: 150%; 
  font-weight: bold;
- color:0000000;
+ color: black;
  }
  
 h4 {
@@ -69,3 +66,20 @@ pre {
  margin:0;
  padding:20px 0;
  }
+
+a:link { 
+	color: #9C2A00;
+	text-decoration: none;
+	}
+a:visited { 
+	color: #9C2A00;
+	text-decoration: none;
+	}
+a:hover { 
+	color: #D6BF86;
+	text-decoration: none;
+	}
+a:active { 
+	color: #9C2A00;
+	text-decoration: none;
+	}
