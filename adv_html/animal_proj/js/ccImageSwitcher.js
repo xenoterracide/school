@@ -1,5 +1,7 @@
+/* create image array */
 var aryImages = new Array();
 
+/* define images in array */
 aryImages[1] = "images/platypus1.jpg";
 aryImages[2] = "images/platypus2.jpg";
 
