@@ -1,15 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <head>
-	<title>Sauropsida (reptiles)</title>
+	<title>Platypus</title>
 	<meta
 		http-equiv="Content-Type"
 		content="text/html; charset=utf-8">
 	<link
 		rel="stylesheet"
 		type="text/css"
-		media="screen"
-		title="platypus"
 		href="css/platypus.css">
 	<script
 		type="text/javascript"
@@ -17,6 +15,7 @@
 	</script>
 </head>
 <body>
+<div id="head">
 <h2>Platypus</h2>
 <!-- attribution for images/platypus1.jpg -->
 <!-- <a href="http://www.flickr.com/photos/marj_k/77775570/">Marj Kibby</a>-->
@@ -24,11 +23,9 @@
 <!-- attribution for images/platypus2.jpg -->
 <!-- <a href="http://www.flickr.com/photos/viciousbits/2377307001/">Viscious 
 Bits</a> -->
-<table id="platypus_classification" class="classification" align="center" 
-border="1">
-	<tr>
-		<th colspan="2">Fast Facts</th>
-	</tr>
+<div class="classification">
+<table id="platypus_classification" class="classification">
+	<caption>Fast Facts</caption>
 	<tr>
 		<th>Type: </th>
 		<td>Mammal</td>
@@ -50,15 +47,20 @@ border="1">
 		<td>Least Concern</td>
 	</tr>
 </table>
-<div class="anim_img">
+</div>
+<div id="img_switcher" class="img_switch">
 	<img
 		width="500"
 		height="300"
 		src="images/platypus1.jpg"
 		alt="platypus in water"
-		name="img">
-	<a href="#img" onclick="swap(1, 'img')">1</a>
-	<a href="#img" onclick="swap(2, 'img')">2</a>
+		name="img"
+		class="img_switch">
+	<div id="img_links" class="img_switch">
+		<a href="#img" onclick="swap(1, 'img')">1</a>
+		<a href="#img" onclick="swap(2, 'img')">2</a>
+	</div>
+</div>
 </div>
 <p>
 	The Platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to 
@@ -80,6 +82,7 @@ border="1">
 	it has appeared as a mascot at national events and is featured on the 
 	reverse of the Australian 20 cent coin.
 </p>
+<div id="content2">
 <p>
 	Until the early 20th century it was hunted for its fur, but it is now 
 	protected throughout its range. Although captive breeding programs have had 
@@ -246,5 +249,6 @@ border="1">
 	nearly always in the riverbank not far above water level, and often hidden 
 	under a protective tangle of roots.
 </p>
+</div>
 </body>
 </html>

@@ -1,3 +1,44 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+}
+body {
+	background-color: #F5F5DC; /* beige */
+}
 h2 {
-	background-color: #A0522D;
+	text-align: center;
+	color: #F5F5DC; /* beige */
+	background-color: #6D351A; /* Auburn */
+	padding: 0.5em;
+}
+p {
+	padding: 0.5em;
+	clear: left;
+}
+caption {
+	font-weight: bold;
+}
+div#content2 {
+	clear: both;
+}
+div.classification {
+	float: left;
+	margin: 20px;
+}
+table.classification {
+	border-color: #6D351A; /* Auburn */
+	border-style: solid;
+	border-width: 1px;
+}
+div#img_switcher {
+	float: right;
+	clear: right;
+	border-color: #6D351A; /* Auburn */
+	border-style: solid;
+	border-width: 1px;
+	margin: 0px 0px 20px 20px;
+}
+div#img_links {
+	text-align: center;
 }
