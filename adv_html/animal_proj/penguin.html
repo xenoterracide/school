@@ -2,36 +2,48 @@
 <head>
 <title>Animals of the World - Penguins</title>
 
-<link rel="stylesheet" type="text/css" href="penguin.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="css/penguin.css" />
+
 
 <SCRIPT LANGUAGE=JavaScript>
 intImage = 2;
 function swapImage() {
 switch (intImage) {
  case 1:
-   IMG1.src = "penguins1.jpg"
+   IMG1.src = "images/penguins1.jpg"
    intImage = 2
    return(false);
 case 2:
-   IMG1.src = "penguins2.jpg"
+   IMG1.src = "images/penguins2.jpg"
    intImage = 1
    return(false);
  }
 }
 </SCRIPT>
 
+<style type="text/css">
+
+.textcolor {color:white;}
+
+</style>
+
+
+
 
 </head>
 <body>
 <div id="bar-top"><h2 align="center">Penguin</h2></div>
-<div id="content">
+<div id="content" class="#text">
 <div id="divimg">
-<p><IMG width="400" height="250" id="IMG1" name="IMG1" src="penguins1.jpg" 
+<p><IMG width="400" height="250" id="IMG1" name="IMG1" src="images/penguins1.jpg" 
  onclick="swapImage();">
-<p style="color:black; text-align:center; ">Click Picture To Change</p>
+<p style="color:white; text-align:center; ">Click Picture To Change</p>
 </div>
 <br>
-<table id="myTable" align="center" border="1">
+<table id="myTable" align="center" border="1" class="textcolor">
 <tr>
 <th colspan="2" style="color:maroon;">Fast Facts</th>
 <tr>
@@ -56,13 +68,13 @@ case 2:
 </tr>
 </table>
 <br>
-<p>Penguins are a group of aquatic birds who's number of species is widely debated. Depending on who's authority is followed there are anywhere from 17 to 20 different species in the Spheniscidae (Penguin) family. The penguin is found almost exclusively in the Southern Hemisphere. Contrary to popular belief, penguins aren't found only in cold enviroments. They do live in warmer climates as well. In fact only a few species actually reside as far south as antartica. Penguins can be found as far north as the Galapagos Islands. 
+<p class="textcolor">Penguins are a group of aquatic birds who's number of species is widely debated. Depending on who's authority is followed there are anywhere from 17 to 20 different species in the Spheniscidae (Penguin) family. The penguin is found almost exclusively in the Southern Hemisphere. Contrary to popular belief, penguins aren't found only in cold enviroments. They do live in warmer climates as well. In fact only a few species actually reside as far south as antartica. Penguins can be found as far north as the Galapagos Islands. 
 
 </p>
 
-<p>Penguins seem to have no special fear of humans and have approached groups of explorers without hesitation. This is probably on account of there being no land predators in Antarctica or the nearby offshore islands that prey on or attack penguins. Instead, penguins are at risk at sea from predators such as the leopard seal. Typically, penguins do not approach closer than about 3 meters (10 ft) at which point they become nervous. This is also the distance that Antarctic tourists are told to keep from penguins (tourists are not supposed to approach closer than 3 meters, but are not expected to withdraw if the penguins come closer). </p>
+<p class="textcolor">Penguins seem to have no special fear of humans and have approached groups of explorers without hesitation. This is probably on account of there being no land predators in Antarctica or the nearby offshore islands that prey on or attack penguins. Instead, penguins are at risk at sea from predators such as the leopard seal. Typically, penguins do not approach closer than about 3 meters (10 ft) at which point they become nervous. This is also the distance that Antarctic tourists are told to keep from penguins (tourists are not supposed to approach closer than 3 meters, but are not expected to withdraw if the penguins come closer). </p>
 
-<p>Most penguins feed on krill, fish, squid, and other forms of sealife caught while swimming underwater. They spend half of their life on land and half in the oceans. 
+<p class="textcolor">Most penguins feed on krill, fish, squid, and other forms of sealife caught while swimming underwater. They spend half of their life on land and half in the oceans. 
 </p>
 <br />
 
