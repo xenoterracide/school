@@ -7,13 +7,12 @@ body {
  padding:0;
  color: #000000;
  text-align: center;
- background-image: url('bluice.jpg');
  }
 
 #bar-top {
  width: 100%; 
  height: 10%; 
- background: teal;
+ background: green;
  color: #FFFFFF;
  border: solid #D6BF86;
  border-width: 2px 0; 
@@ -28,7 +27,7 @@ body {
  background: #FFFFFF;
  color: #333333;
  overflow: auto;
- background-image: url('images/bluice.jpg');
+ background-image: url('images/ostrichbg.gif');
  }
 
 #divimg {
