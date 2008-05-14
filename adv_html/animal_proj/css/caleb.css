@@ -5,22 +5,6 @@
 body {
   width: 800px;
 }
-h1 {
-  text-align: center;
-}
-div#nav {
-  float: left;
-  padding: 5px;
-}
-div#nav.ul {
-  list-style-type: none;
-}
-iframe#content {
-  border: none;
-  overflow: hidden;
-  width: 750px;
-}
-  
 p {
-  margin: 1em;
+	margin: 1em;
 }
