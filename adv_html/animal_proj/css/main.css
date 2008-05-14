@@ -3,7 +3,7 @@
 	padding: 0px;
 }
 body {
-	width: 800;
+	width: 80%;
 	background-color: black;
 	color: white;
 	font-family: arial, sans-serif;
@@ -19,6 +19,7 @@ iframe#content {
 }
 #nav {
     float: left;
+	clear: both;
 }
 #nav ul {
     list-style-type:none;
