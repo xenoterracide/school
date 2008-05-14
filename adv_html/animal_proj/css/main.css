@@ -17,6 +17,59 @@ iframe#content {
   overflow: hidden;
   width: 80%;
 }
-div#nav {
-	float: left;
+#nav {
+    float: left;
+}
+#nav ul {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    text-indent:0px;
+}
+#nav li {
+	font-weight: bold;
+	font-size: 11pt;
+    height:24px;
+    line-height:20px;
+    width:200px;
+}
+#nav li {
+    width:200px;
+}
+#nav li ul li {
+    width:200px;
+}
+#nav li.category {
+    padding-left:10px;
+    height:auto;
+    color: gray;
+}
+/*IE needs extra margin and padding set for the indented li */
+* html #nav li ul li {
+    margin-left:-10px;
+    padding-left:10px;
+}
+/* end IE hack */
+
+#nav li a,
+#nav li ul li a {
+    font-weight:normal;
+    color: white;
+    text-decoration:none;
+    display:block;
+	padding-left:10px;
+}
+#nav li.category ul li a {
+    margin-left:-10px;
+    padding-left:30px;
+}
+#nav li a:link,
+#nav li a:visited {
+    color: white;
+    text-decoration:none;
+}
+#nav li a:hover,
+#nav li a:active {
+	color: white;
+    text-decoration:none;
 }
