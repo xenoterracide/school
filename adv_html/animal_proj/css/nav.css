@@ -12,13 +12,13 @@
 	font-size: 11pt;
     height:24px;
     line-height:20px;
-    width:180px;
+    width:200px;
 }
 #nav li {
-    width:180px;
+    width:200px;
 }
 #nav li ul li {
-    width:150px;
+    width:200px;
 }
 #nav li.category {
     padding-left:10px;
