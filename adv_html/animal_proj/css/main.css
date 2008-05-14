@@ -3,7 +3,10 @@
 	padding: 0px;
 }
 body {
-  width: 800;
+	width: 800;
+	background-color: black;
+	color: white;
+	font-family: arial, sans-serif;
 }
 iframe#content {
   border: none;
