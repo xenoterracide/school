@@ -8,6 +8,10 @@ body {
 	color: white;
 	font-family: arial, sans-serif;
 }
+h1 {
+	text-align: center;
+	margin: 20px;
+}
 iframe#content {
   border: none;
   overflow: hidden;
