@@ -23,7 +23,7 @@
 #nav li.category {
     padding-left:10px;
     height:auto;
-    color: white;
+    color: gray;
 }
 /*IE needs extra margin and padding set for the indented li */
 * html #nav li ul li {
@@ -35,7 +35,7 @@
 #nav li a,
 #nav li ul li a {
     font-weight:normal;
-    color: #9C2A00;
+    color: white;
     text-decoration:none;
     display:block;
 	padding-left:10px;
@@ -46,11 +46,11 @@
 }
 #nav li a:link,
 #nav li a:visited {
-    color: #9C2A00;
+    color: white;
     text-decoration:none;
 }
 #nav li a:hover,
 #nav li a:active {
-	color: #9C2A00;
+	color: white;
     text-decoration:none;
 }
