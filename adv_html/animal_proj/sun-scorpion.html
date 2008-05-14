@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+
+
+<html>
+	<head>
+
+		<link
+		rel="stylesheet"
+		type="text/css"
+		href="css/format.css">
+
+			<title>
+				Sun Scorpion
+			</title>
+
+			<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
+	</head>
+<body class="Arachnids">
+
+<h2>Camel Spider AKA Sun Scorpion</h2>
+
+
+<a href="javascript:gotoshow()"><img src="images/sun-scorpion1.jpg" name="slide" border=0 width=300 height=375></a>
+<script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/sun-scorpion1.jpg","images/sun-scorpion2.jpg")
+
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=2000
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+</script>
+
+<table>
+	<tr>
+		<th>Type:</th>
+		<td>Arachnid</td>
+	</tr>
+	<tr>
+		<th>Diet:</th>
+		<td>Carnivore</td>
+	</tr>
+	<tr> 
+		<th>Average lifespan in the wild:</th>
+		<td>Less than one year</td>
+	</tr>
+	<tr> 
+		<th>Size:</th>
+		<td>6 in (15 cm)</td>
+	</tr>
+	<tr> 
+		<th>Weight:</th>
+		<td>2 oz</td>
+	</tr>
+</table>
+
+<div class="content">
+
+<p>
+Camel spiders became an Internet sensation during the Iraq war of 2003, when rumors of their bloodthirsty nature began to circulate online. Many tales were accompanied with photos purporting to show spiders half the size of a human.
+</p>
+
+<p>
+For many years, Middle Eastern rumors have painted camel spiders as large, venomous predators, as fast as a running human, with a voracious appetite for large mammals. The myths are untrue. These insects do not actually eat camels' stomachs or sleeping soldiers, and they are not so large—but the real camel spider is still an amazing predator.
+</p>
+
+<p>
+The camel spider's history of misinformation begins with a misidentification. Camel spiders are not even spiders. Like spiders, they are members of the class Arachnida, but they are actually solpugids.
+</p>
+
+<p>
+Camel spiders, also called wind scorpions and Egyptian giant solpugids (SAHL-pyoo-jids), are only about 6 inches (15 centimeters) long. Photos that purport to show creatures six times that size have misleading perspective—the spider is invariably placed in the foreground where the lens makes it appear much bigger than its actual size. True, they are fast, but only compared to other arachnids. Their top speed is estimated at 10 miles (16 kilometers) per hour.
+</p>
+
+<p>
+Camel spiders are not deadly to humans (though their bite is painful), but they are vicious predators that can visit death upon insects, rodents, lizards, and small birds. These hardy desert dwellers boast large, powerful jaws, which can be up to one-third of their body length. They use them to seize their victims and turn them to pulp with a chopping or sawing motion. Camel spiders are not venomous, but they do utilize digestive fluids to liquefy their victims' flesh, making it easy to suck the remains into their stomachs.
+</p>
+
+</div>
+
+<a href="main.html">Back</a>
+
+</body>
+</html>

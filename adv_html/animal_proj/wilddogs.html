@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+<html>
+	<head>
+		<script language="JavaScript1.1">
+<!--
+
+/*
+JavaScript Image slideshow:
+By JavaScript Kit (www.javascriptkit.com)
+Over 200+ free JavaScript here!
+*/
+
+var slideimages=new Array()
+var slidelinks=new Array()
+function slideshowimages(){
+for (i=0;i<slideshowimages.arguments.length;i++){
+slideimages[i]=new Image()
+slideimages[i].src=slideshowimages.arguments[i]
+}
+}
+
+function slideshowlinks(){
+for (i=0;i<slideshowlinks.arguments.length;i++)
+slidelinks[i]=slideshowlinks.arguments[i]
+}
+
+function gotoshow(){
+if (!window.winslide||winslide.closed)
+winslide=window.open(slidelinks[whichlink])
+else
+winslide.location=slidelinks[whichlink]
+winslide.focus()
+}
+
+//-->
+</script>
+
+		<link
+		rel="stylesheet"
+		type="text/css"
+		href="css/format.css">
+
+		<title>Wild Dog</title>
+	</head>
+<body class="mammal">
+
+<h2>Wild Dogs</h2>
+
+<a href="javascript:gotoshow()"><img src="images/wilddogs1.jpg" name="slide" border=0 width=300 height=375></a>
+<script>
+<!--
+
+//configure the paths of the images, plus corresponding target links
+slideshowimages("images/wilddogs1.jpg","images/wilddogs2.jpg")
+
+//configure the speed of the slideshow, in miliseconds
+var slideshowspeed=2000
+
+var whichlink=0
+var whichimage=0
+function slideit(){
+if (!document.images)
+return
+document.images.slide.src=slideimages[whichimage].src
+whichlink=whichimage
+if (whichimage<slideimages.length-1)
+whichimage++
+else
+whichimage=0
+setTimeout("slideit()",slideshowspeed)
+}
+slideit()
+
+//-->
+</script>
+
+
+<table>
+	<tr>
+		<th>Type:</th>
+		<td>Mammal</td>
+	</tr>
+	<tr>
+		<th>Diet:</th>
+		<td>Carnivore</td>
+	</tr>
+	<tr> 
+		<th>Average lifespan in the wild:</th>
+		<td>Up to 11 years</td>
+	</tr>
+	<tr> 
+		<th>Size:</th>
+		<td>29.5 to 43 in (75 to 110 cm)</td>
+	</tr>
+	<tr> 
+		<th>Weight:</th>
+		<td>39.5 to 79 lbs (18 to 36 kg)</td>
+	</tr>
+	<tr> 
+		<th>Group Name:</th>
+		<td>Pack</td>
+	</tr>
+	<tr> 
+		<th>Protection status:</th>
+		<td>Endangered</td>
+	</tr>
+</table>
+
+<div class="content"> 
+
+<p>
+The African wild dog, also called Cape hunting dog or painted dog, typically roams the open plains and sparse woodlands of sub-Saharan Africa.
+</p>
+
+<p>
+These long-legged canines have only four toes per foot, unlike other dogs, which have five toes on their forefeet. The dog's Latin name means "painted wolf," referring to the animal's irregular, mottled coat, which features patches of red, black, brown, white, and yellow fur. Each animal has its own unique coat pattern, and all have big, rounded ears.
+</p>
+
+<p>
+African wild dogs live in packs that are usually dominated by a monogamous breeding pair. The female has a litter of 2 to 20 pups, which are cared for by the entire pack. These dogs are very social, and packs have been known to share food and to assist weak or ill members. Social interactions are common, and the dogs communicate by touch, actions, and vocalizations.
+</p>
+
+<p>
+African wild dogs hunt in formidable, cooperative packs of 6 to 20 (or more) animals. Larger packs were more common before the dogs became endangered. Packs hunt antelopes and will also tackle much larger prey, such as wildebeests, particularly if their quarry is ill or injured. The dogs supplement their diet with rodents and birds. As human settlements expand, the dogs have sometimes developed a taste for livestock, though significant damage is rare. Unfortunately, they are often hunted and killed by farmers who fear for their domestic animals.
+</p>
+
+<p>
+African hunting dogs are endangered. They are faced with shrinking room to roam in their African home. They are also quite susceptible to diseases spread by domestic animals.
+</p>
+
+</div>
+
+<a href="main.html">Back</a>
+
+</body>
+</html>

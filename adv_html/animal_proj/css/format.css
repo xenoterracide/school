@@ -1,0 +1,36 @@
+body.fish {
+	background-color: #99CCCC;
+}
+body.aves {
+	background-color: #00BFFF;
+}
+body.insect{
+	background-color: #B8860B;
+}
+body.mammal{ 
+	background-color: #CD853F;
+}
+body.reptile{
+	background-color: #008000;
+}
+body.Amphibians{
+	background-color: #00FFFF;
+}
+body.Arachnids{
+	background-color: #708090;
+}
+h2{
+	text-align: center;
+}
+a:link {
+	color: red
+}
+img {
+	float: left;
+}
+div.content {
+	clear: both;
+}
+tr {
+	text-align: left;
+}

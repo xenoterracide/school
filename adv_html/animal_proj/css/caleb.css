@@ -3,24 +3,15 @@
   padding: 0px;
 }
 body {
-  width: 800;
- }
-h1 {
-  text-align: center;
-}
-div#nav {
-  float: left;
-  padding: 5px;
-}
-div#nav.ul {
-  list-style-type: none;
-}
-iframe#content {
-  border: none;
-  overflow: hidden;
-  width: 80%;
-
+  width: 800px;
 }
 p {
   margin: 1em;
 }
+=======
+  width: 800px;
+}
+p {
+	margin: 1em;
+}
+>>>>>>> master:adv_html/animal_proj/css/caleb.css
