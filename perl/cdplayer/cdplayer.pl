@@ -16,8 +16,8 @@ sub prompt
 		print "Enter an offset (please enter an integer): ";
 }
 
-sub sortcd{
-
+sub sortcd
+{
 	print "Enter Aritist Name, Issue Year, or CD Title to sort by: \n";
 	chomp ($entry = <STDIN>);
 
@@ -50,7 +50,8 @@ sub sortcd{
 
 # Search Artist - Search an artist and display CD information if found. If not found display "not found"
 
-sub searchcd{
+sub searchcd
+{
 	open(File, "cdlist" || die "Can't open CD List: $!\n";
 
 	print "Enter Aritist Name to search for: \n";
@@ -94,4 +95,4 @@ sub main {
 	&prompt;
 }
 
-&prompt;
+&main;
