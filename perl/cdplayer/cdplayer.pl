@@ -20,11 +20,9 @@ sub prompt
 sub sortcd {
 	print "Enter Aritist Name, Issue Year, or CD Title to sort by:\n";
 	chomp ($entry = <STDIN>);
-	# not sure if the bleow is needed
-	# while (<FILE>) {
-	# ($artist, $year, $title)=split(":");
+
 	foreach (@cddata) {
-		($artist,$year, $title) = split(":");
+		&read_data;
 # artitst
 		if ($entry = $artist) {
 			@cddata = <>;
@@ -33,13 +31,14 @@ sub sortcd {
 		}
 # year
 		elsif ($entry = $year) {
-			$year{$_} = $year; # record it
-			print sort {$year{$a} <=> $year{$b}};
+			sub numeric {$a <=> $b ; }
+			@year_sort=sort numeric(@cddata);
+			print @year_sort;
 		}
 # title
-		elsif ($entry = $title) { #match
-			$title{$_} = $title; # record it
-			print sort {$year{$a} <=> $year{$b}};
+		elsif ($entry = $title) {
+			@sortedlist = sort @cddata;
+			print @sortedlist;  
 		}
 #illegal
 		else {
