@@ -31,7 +31,7 @@ sub sortcd
 			{print FOO;}
 		close FOO;
 	elsif($entry = $year){ 
-		sub byyear {$year{$a} <=> $year{$b};      
+		sub byyear {$yea {$a} <=> $yea {$b};      
 		open(FOO, "| sort byyear|");
 		open(FILE, "cdlist");
 		while (<FILE>)
@@ -43,7 +43,7 @@ sub sortcd
 		while (<FILE>)
 			{print FOO;}
 		close FOO;
-	else{print "Illegal Choice\n"};
+	els {print "Illegal Choice\n"};
 	};
 };
 
@@ -62,7 +62,7 @@ sub searchcd
 
 	if($entry = $artist){
 		print $artist \t $year \t title "\n";}
-	else{print "Artist not found. \n"};
+	els {print "Artist not found. \n"};
 	};
 
 	close(FILE);
@@ -70,7 +70,8 @@ sub searchcd
 
 # Random CD - Randomly select a CD from the file
 
-sub randomcd{
+sub randomc
+{
 	srand;
 	open(File, "cdlist" || die "Can't open CD List: $!\n";
 
