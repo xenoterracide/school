@@ -1,9 +1,10 @@
 #!/usr/bin/perl
+use warnings;
 # prompt user
 sub prompt
 {
 	my $offset;
-	print "Enter an offset: " if is_interactive;
+	print "Enter an offset: ";
 	GET_OFFSET:
 	while (<>)
 	{
@@ -12,8 +13,7 @@ sub prompt
 			$offset = $_;
         	last GET_OFFSET;
 		}
-		print "Enter an offset (please enter an integer): "
-        if is_interactive;
+		print "Enter an offset (please enter an integer): ";
 }
 
 sub sortcd{
