@@ -37,11 +37,11 @@ sub search {
 		chomp($input = <>);
 		if ($input == 8) {
 			&prompt;
+		} elsif ($input == 1) {
+			print "Artist to search for: ";
+			chomp($input = <>);
 		}
 	} while ($input != 9);
-}
-sub mod_db {
-	print "mod_db placeholder\n";
 }
 
 sub main {
