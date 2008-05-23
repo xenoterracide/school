@@ -35,7 +35,6 @@ sub search {
 		print "9:\texit\n";
 		print "Enter an option: ";
 		chomp($input = <>);
-		chomp($input);
 		if ($input == 8) {
 			&prompt;
 		}
