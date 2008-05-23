@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use warnings;
+use diagnostics;
 use strict;
 my @cd_db;
 
@@ -45,7 +46,7 @@ sub search {
 			chomp($input = <>);
 			print "$input\n";
 			for (my $idx = 0; $idx<=100; $idx++) {
-				if ($cd_db[$idx][0] =~ m/$input/g) {
+				if ($cd_db[$idx][0] = m/$input/g) {
 					print "$cd_db[$idx][0]\n";
 				}
 			}
