@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 use warnings;
+use strict;
+my @cd_db;
 
 # read data.txt
 sub read_data {
@@ -13,6 +15,7 @@ sub read_data {
 # initial menu
 sub prompt
 {
+	my $input;
 	my $offset = 0;
 	do {
 		print "1:\tsearch\n";
@@ -20,7 +23,7 @@ sub prompt
 		print "Enter an option: ";
 		chomp($input = <>);
 		if ( $input == 1) {
-			&search;
+			search();
 		}
 	} while ($input != 9);
 }
@@ -28,6 +31,7 @@ sub prompt
 # search data.txt
 sub search {
 	my $idx = 0;
+	my $input;
 	do {
 		print "Search\n";
 		print "1:\tby Track\n";
@@ -39,12 +43,12 @@ sub search {
 		print "Enter an option: ";
 		chomp($input = <>);
 		if ($input == 8) {
-			&prompt;
+			prompt();
 		} elsif ($input == 1) {
 			print "Track to search for: ";
 			chomp($input = <>);
-			for ($idx; $idx<=100; $idx++) {
-				if ($cd_db[$idx][0] = i/$input/g) {
+			for ($idx; $idx<=$#cd_db; $idx++) {
+				if ($cd_db[$idx][0] =~ m/$input/g) {
 					print "$cd_db[$idx][0]\n";
 				}
 			}
@@ -53,7 +57,7 @@ sub search {
 }
 
 sub main {
-	&read_data;
-	&prompt;
+	read_data();
+	prompt();
 }
-&main;
+main();
