@@ -1,112 +1,37 @@
 #!/usr/bin/perl
 use warnings;
-
-# prompt user
+sub read_data {
+	open (DATA, "data.txt") or die "can't open data.txt: $!\n";
+	while (<DATA>) {
+		@cd_db = ( @cd_db, [ split(/:/) ] );
+	}
+	close (DATA) or die "can't close data.txt: $!\n";
+}
+sub input {
+	$input = <>;
+}
 sub prompt
 {
-	my $offset;
-	print "Enter an offset: ";
-	GET_OFFSET:
-	while (<>) {
-		chomp;
-		if (m/\\A [+-] \\d+ \\z/x) {
-			$offset = $_;
-			last GET_OFFSET;
+	my $offset = 0;
+	do {
+		print "1:\tmodify collection\n";
+		print "4:\texit\n";
+		print "Enter an offset: ";
+		$input = <>;
+		chomp($input);
+		if ( $input == 1) {
+			&mod_db;
 		}
 	}
-	print "Enter an offset (please enter an integer): ";
+	while ($input != 4);
 }
 
-sub sortcd {
-	print "Enter Aritist Name, Issue Year, or CD Title to sort by:\n";
-	chomp ($entry = <STDIN>);
-
-	foreach (@cddata) {
-		&read_data;
-# artitst
-		if ($entry = $artist) {
-			@cddata = <>;
-			@sortedlist = sort @cddata; # sort based on first entry
-			print @sortedlist;
-		}
-# year
-		elsif ($entry = $year) {
-			sub numeric {$a <=> $b ; }
-			@year_sort=sort numeric(@cddata);
-			print @year_sort;
-		}
-# title
-		elsif ($entry = $title) {
-			@sortedlist = sort @cddata;
-			print @sortedlist;  
-		}
-#illegal
-		else {
-			print "Illegal Choice.\n";
-		}
-	}; #match
+sub mod_db {
+	print "mod_db placeholder\n";
 }
 
-# Search Artist - Search an artist and display CD information if found. If not found display "not found"
-
-sub searchcd
-{
-	open (File, "data.txt") or die "Can't open CD List: $!\n";
-
-	print "Enter Aritist Name to search for: \n";
-	chomp ($entry = <STDIN>);
-
-	while (<FILE>) {
-		($artist, $year, $title)=split(":");
-
-		if ($entry = $artist) {
-			print "$artist\t $year\t$title\n";
-		}
-		else {
-			print "Artist not found. \n"
-		};
-	};
-
-	close(FILE);
-};
-
-# Random CD - Randomly select a CD from the file
-
-sub randomcd
-{
-	srand;
-	open(File, "cdlist") or die "Can't open CD List: $!\n";
-
-	rand($.) <1 && ($line=$_) while <>;
-	print $line "\n";
-
-	close(FILE);
-};
-
-# Add CD info - Add a CD to collection list
-
-sub addcd
-{
-	open(HANDLE, ">>cdlist") || die "Can't open CD List: $!\n";
-
-	print "Enter CD information in the following format Artist:IssueYear:CD Title \n";
-	chomp $cdinfo=<STDIN>;
-
-	print HANDLE $cdinfo;
-};
-
-sub read_data
-{
-	open (DATA, "data.txt") or die "can't open data: $!\n";
-	while (<DATA>) {
-		($track, $artist, $album, $year) = split(":");
-	}
-	close (DATA);
-}
-
-sub main
-{
+sub main {
+	&read_data;
 	&prompt;
 }
-
 &main;
