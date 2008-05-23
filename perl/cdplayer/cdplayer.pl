@@ -7,9 +7,6 @@ sub read_data {
 	}
 	close (DATA) or die "can't close data.txt: $!\n";
 }
-sub input {
-	$input = <>;
-}
 sub prompt
 {
 	my $offset = 0;
