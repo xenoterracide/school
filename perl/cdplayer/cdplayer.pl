@@ -30,7 +30,6 @@ sub prompt
 
 # search data.txt
 sub search {
-	my $idx = 0;
 	my $input;
 	do {
 		print "Search\n";
@@ -38,16 +37,14 @@ sub search {
 		print "2:\tby Artist\n";
 		print "3:\tby Album\n";
 		print "4:\tby Year\n";
-		print "8:\treturn to main\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
 		chomp($input = <>);
-		if ($input == 8) {
-			prompt();
-		} elsif ($input == 1) {
+		if ($input == 1) {
 			print "Track to search for: ";
 			chomp($input = <>);
-			for ($idx; $idx<=$#cd_db; $idx++) {
+			print "$input\n";
+			for (my $idx = 0; $idx<=100; $idx++) {
 				if ($cd_db[$idx][0] =~ m/$input/g) {
 					print "$cd_db[$idx][0]\n";
 				}
