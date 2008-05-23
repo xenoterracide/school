@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 use warnings;
+
+# read data.txt
 sub read_data {
 	open (DATA, "data.txt") or die "can't open data.txt: $!\n";
 	while (<DATA>) {
@@ -7,6 +9,8 @@ sub read_data {
 	}
 	close (DATA) or die "can't close data.txt: $!\n";
 }
+
+# initial menu
 sub prompt
 {
 	my $offset = 0;
@@ -21,7 +25,9 @@ sub prompt
 	} while ($input != 9);
 }
 
+# search data.txt
 sub search {
+	my $idx = 0;
 	do {
 		print "Search\n";
 		print "1:\tby Track\n";
@@ -35,8 +41,13 @@ sub search {
 		if ($input == 8) {
 			&prompt;
 		} elsif ($input == 1) {
-			print "Artist to search for: ";
+			print "Track to search for: ";
 			chomp($input = <>);
+			for ($idx; $idx<=100; $idx++) {
+				if ($cd_db[$idx][0] = i/$input/g) {
+					print "$cd_db[$idx][0]\n";
+				}
+			}
 		}
 	} while ($input != 9);
 }
