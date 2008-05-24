@@ -15,22 +15,23 @@ sub read_data {
 # initial menu
 sub prompt
 {
-	my $input;
+	my $menu_input;
 	my $offset = 0;
 	do {
 		print "1:\tsearch\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
-		chomp($input = <>);
-		if ( $input == 1) {
+		chomp($menu_input = <>);
+		if ( $menu_input == 1) {
 			search();
 		}
-	} while ($input != 9);
+	} while ($menu_input != 9);
 }
 
 # search data.txt
 sub search {
-	my $input;
+	my $menu_input; # navigate menu
+	my $search_input; #var for regex
 	do {
 		print "Search\n";
 		print "1:\tby Track\n";
@@ -39,17 +40,20 @@ sub search {
 		print "4:\tby Year\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
-		chomp($input = <>);
-		if ($input == 1) {
+		chomp($menu_input = <>);
+		if ($menu_input == 1) {
 			print "Track to search for: ";
-			chomp($input = <>);
+			chomp($search_input = <>);
+			print "$search_input 1\n"; #debug
 			for (my $idx = 0; $idx<=100; $idx++) {
-				if ($cd_db[$idx][0] =~ m/$input/gi) {
+				print "$search_input 2\n"; #debug
+				if ($cd_db[$idx][0] =~ m/$search_input/gi) {
+					print "$search_input 3\n"; #debug
 					print "\n\t$cd_db[$idx][0]\n\n";
 				}
 			}
 		}
-	} while ($input != 9);
+	} while ($menu_input != 9);
 }
 
 sub main {
