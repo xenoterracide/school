@@ -51,7 +51,9 @@ sub search {
 					print "$search_input 3\n"; #debug
 					print "\n\t$cd_db[$idx][0]\n\n";
 				}
+				print "$search_input 4\n"; #debug
 			}
+			print "$search_input 5\n"; #debug
 		}
 	} while ($menu_input != 9);
 }
