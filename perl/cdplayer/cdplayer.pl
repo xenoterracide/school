@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 use warnings;
-use diagnostics;
 use strict;
 my @cd_db;
 
@@ -44,10 +43,9 @@ sub search {
 		if ($input == 1) {
 			print "Track to search for: ";
 			chomp($input = <>);
-			print "$input\n";
 			for (my $idx = 0; $idx<=100; $idx++) {
 				if ($cd_db[$idx][0] =~ m/$input/gi) {
-					print "$cd_db[$idx][0]\n";
+					print "\n\t$cd_db[$idx][0]\n\n";
 				}
 			}
 		}
