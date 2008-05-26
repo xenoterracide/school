@@ -119,14 +119,23 @@ sub modify
 		}
 	} while ($menu_input != 9);
 }
-sub display_cd {
 
+sub display_cds {
 }
 
 sub add_cd {
 }
 
 sub remove_cd {
+	my $previous; # previous album for comparison
+	print "\n";
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		if ($previous ne $cd_db[$idx][2]) {
+			print "\t$idx\t$cd_db[$idx][2]\n";
+		}
+		$previous = $cd_db[$idx][2];
+	}
+	print "\n";
 }
 
 sub favorites {
