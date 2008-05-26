@@ -26,6 +26,10 @@ sub prompt
 		chomp($menu_input = <>);
 		if ( $menu_input == 1) {
 			search();
+		} elsif ( $menu_input == 2 ) {
+			modify();
+		} elsif ( $menu_input == 3 ) {
+			favorites();
 		}
 	} while ($menu_input != 9);
 }
@@ -98,6 +102,11 @@ sub search {
 			}
 		}
 	} while ($menu_input != 9);
+}
+sub modify {
+}
+
+sub favorites {
 }
 
 sub main {
