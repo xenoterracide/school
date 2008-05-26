@@ -16,7 +16,6 @@ sub read_data {
 sub prompt
 {
 	my $menu_input;
-	my $offset = 0;
 	do {
 		print "1:\tsearch\n";
 		print "2:\tmodify cd's\n";
