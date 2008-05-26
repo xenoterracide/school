@@ -55,7 +55,7 @@ sub search {
 			print "Track to search for: ";
 			chomp($search_input = <>);
 			print "\n"; # filler blank line
-			for (my $idx = 0; $idx<=100; $idx++) {
+			for (my $idx = 0; $idx<=$#cd_db; $idx++) {
 				if ($cd_db[$idx][0] =~ m/$search_input/gi) {
 					print "\tTrack:\t$cd_db[$idx][0]\n";
 					print "\tArtist:\t$cd_db[$idx][1]\n";
@@ -67,7 +67,7 @@ sub search {
 			print "Artist to search for: ";
 			chomp($search_input = <>);
 			print "\n"; # filler blank line
-			for (my $idx = 0; $idx<=100; $idx++) {
+			for (my $idx = 0; $idx<=$#cd_db; $idx++) {
 				if ($cd_db[$idx][1] =~ m/$search_input/gi) {
 					print "\tTrack:\t$cd_db[$idx][0]\n";
 					print "\tArtist:\t$cd_db[$idx][1]\n";
@@ -79,7 +79,7 @@ sub search {
 			print "Album to search for: ";
 			chomp($search_input = <>);
 			print "\n"; # filler blank line
-			for (my $idx = 0; $idx<=100; $idx++) {
+			for (my $idx = 0; $idx<=$#cd_db; $idx++) {
 				if ($cd_db[$idx][2] =~ m/$search_input/gi) {
 					print "\tTrack:\t$cd_db[$idx][0]\n";
 					print "\tArtist:\t$cd_db[$idx][1]\n";
@@ -91,7 +91,7 @@ sub search {
 			print "Year to search for: ";
 			chomp($search_input = <>);
 			print "\n"; # filler blank line
-			for (my $idx = 0; $idx<=100; $idx++) {
+			for (my $idx = 0; $idx<=$#cd_db; $idx++) {
 				if ($cd_db[$idx][3] =~ m/$search_input/gi) {
 					print "\tTrack:\t$cd_db[$idx][0]\n";
 					print "\tArtist:\t$cd_db[$idx][1]\n";
@@ -120,6 +120,7 @@ sub modify
 	} while ($menu_input != 9);
 }
 sub display_cd {
+
 }
 
 sub add_cd {
