@@ -142,8 +142,8 @@ sub remove_cd {
 	$cdToRemove = $cd_db[$cd_num][2];
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
 		if ($cdToRemove eq $cd_db[$idx][2]) {
-			my @a=splice(@cd_db, $idx, 1);
-			print "debug: $a\n";
+			my (@a)=splice(@cd_db, $idx, 1);
+			print "debug: splice returns: $a\n";
 		}
 	};
 	## debug block ##
