@@ -124,12 +124,31 @@ sub display_cds {
 }
 
 sub add_cd {
+	my $tmp;
+	my @cd_data;
+
+	print "\n";
+	print "Enter CD DATA\n";
+	print "Track: ";
+	$tmp = <>;
+	push(@cd_data, $tmp);
+	print "Artist: ";
+	$tmp = <>;
+	push(@cd_data, $tmp);
+	print "Album: ";
+	$tmp = <>;
+	push(@cd_data, $tmp);
+	print "Year: ";
+	$tmp = <>;
+	push(@cd_data, $tmp);
+	push(@cd_db, [ @cd_data ]);
 }
 
 sub remove_cd {
 	my $previous = "\n"; # previous album for comparison
 	my $cd_num;
 	my $cdToRemove;
+
 	print "\n";
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
 		if ($previous ne $cd_db[$idx][2]) {
@@ -143,7 +162,7 @@ sub remove_cd {
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
 		if ($cdToRemove eq $cd_db[$idx][2]) {
 			my (@a)=splice(@cd_db, $idx, 1);
-			print "debug: splice returns: $a\n";
+			print "debug: splice returns: @a\n";
 		}
 	};
 	## debug block ##
