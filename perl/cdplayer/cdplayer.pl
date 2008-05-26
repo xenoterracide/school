@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#use warnings; #remove for release
+use warnings; #remove for release
 use strict;
 my @cd_db;
 
@@ -127,7 +127,9 @@ sub add_cd {
 }
 
 sub remove_cd {
-	my $previous; # previous album for comparison
+	my $previous = "\n"; # previous album for comparison
+	my $cd_num;
+	my $cdToRemove;
 	print "\n";
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
 		if ($previous ne $cd_db[$idx][2]) {
@@ -135,6 +137,15 @@ sub remove_cd {
 		}
 		$previous = $cd_db[$idx][2];
 	}
+	print "Remove CD #: ";
+	chomp($cd_num = <>);
+	$cdToRemove = $cd_db[$cd_num][2];
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		if ($cdToRemove eq $cd_db[$idx][2]) {
+			splice(@cd_db, $idx, 1);
+		}
+	};
+
 	print "\n";
 }
 
