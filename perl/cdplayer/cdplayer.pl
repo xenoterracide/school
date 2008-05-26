@@ -102,7 +102,30 @@ sub search {
 		}
 	} while ($menu_input != 9);
 }
-sub modify {
+# modify menu
+sub modify
+{
+	my $menu_input;
+	do {
+		print "1:\tadd cd\n";
+		print "2:\tremove cd\n";
+		print "9:\texit\n";
+		print "Enter an option: ";
+		chomp($menu_input = <>);
+		if ( $menu_input == 1) {
+			add_cd();
+		} elsif ( $menu_input == 2 ) {
+			remove_cd();
+		}
+	} while ($menu_input != 9);
+}
+sub display_cd {
+}
+
+sub add_cd {
+}
+
+sub remove_cd {
 }
 
 sub favorites {
