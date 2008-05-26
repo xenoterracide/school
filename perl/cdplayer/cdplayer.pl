@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-use warnings;
+use warnings; #remove for release
 use strict;
 my @cd_db;
 
@@ -44,16 +44,11 @@ sub search {
 		if ($menu_input == 1) {
 			print "Track to search for: ";
 			chomp($search_input = <>);
-			print "$search_input 1\n"; #debug
 			for (my $idx = 0; $idx<=100; $idx++) {
-				print "$search_input 2\n"; #debug
 				if ($cd_db[$idx][0] =~ m/$search_input/gi) {
-					print "$search_input 3\n"; #debug
 					print "\n\t$cd_db[$idx][0]\n\n";
 				}
-				print "$search_input 4\n"; #debug
 			}
-			print "$search_input 5\n"; #debug
 		}
 	} while ($menu_input != 9);
 }
