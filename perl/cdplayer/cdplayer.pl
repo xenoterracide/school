@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-use warnings; #remove for release
+#use warnings; #remove for release
 use strict;
 my @cd_db;
 
@@ -44,9 +44,25 @@ sub search {
 		if ($menu_input == 1) {
 			print "Track to search for: ";
 			chomp($search_input = <>);
+			print "\n"; # filler blank line
 			for (my $idx = 0; $idx<=100; $idx++) {
 				if ($cd_db[$idx][0] =~ m/$search_input/gi) {
-					print "\n\t$cd_db[$idx][0]\n\n";
+					print "\tTrack:\t$cd_db[$idx][0]\n";
+					print "\tArtist:\t$cd_db[$idx][1]\n";
+					print "\tAlbum:\t$cd_db[$idx][2]\n";
+					print "\tYear:\t$cd_db[$idx][3]\n";
+				}
+			}
+		} elsif ($menu_input == 3) {
+			print "Album to search for: ";
+			chomp($search_input = <>);
+			print "\n"; # filler blank line
+			for (my $idx = 0; $idx<=100; $idx++) {
+				if ($cd_db[$idx][2] =~ m/$search_input/gi) {
+					print "\tTrack:\t$cd_db[$idx][0]\n";
+					print "\tArtist:\t$cd_db[$idx][1]\n";
+					print "\tAlbum:\t$cd_db[$idx][2]\n";
+					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
 			}
 		}
