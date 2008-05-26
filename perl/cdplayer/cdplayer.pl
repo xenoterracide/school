@@ -19,6 +19,8 @@ sub prompt
 	my $offset = 0;
 	do {
 		print "1:\tsearch\n";
+		print "2:\tmodify cd's\n";
+		print "3:\tfavorites\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
 		chomp($menu_input = <>);
