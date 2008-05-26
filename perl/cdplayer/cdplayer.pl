@@ -32,7 +32,10 @@ sub prompt
 sub search {
 	my $menu_input; # navigate menu
 	my $search_input; #var for regex
-	do {
+
+	do { # while != 9 (9 is exit option)
+	
+		# display menu
 		print "Search\n";
 		print "1:\tby Track\n";
 		print "2:\tby Artist\n";
@@ -41,6 +44,8 @@ sub search {
 		print "9:\texit\n";
 		print "Enter an option: ";
 		chomp($menu_input = <>);
+
+		# parse menu
 		if ($menu_input == 1) { # track
 			print "Track to search for: ";
 			chomp($search_input = <>);
