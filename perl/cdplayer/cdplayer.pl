@@ -62,7 +62,9 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
-				else print "not found\n";
+				else {
+					print "not found\n";
+				}
 			}
 		} elsif ($menu_input == 2) { # artist
 			print "Artist to search for: ";
@@ -75,7 +77,9 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
-				else print "not found\n";
+				else {
+					print "not found\n";
+				}
 			}
 		} elsif ($menu_input == 3) { #album
 			print "Album to search for: ";
@@ -88,7 +92,9 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
-				else print "not found\n";
+				else {
+					print "not found\n";
+				}
 			}
 		} elsif ($menu_input == 4) { #year
 			print "Year to search for: ";
@@ -101,7 +107,9 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
-				else print "not found\n";
+				else {
+					print "not found\n";
+				}
 			}
 		}
 	} while ($menu_input != 9);
