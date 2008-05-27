@@ -126,22 +126,32 @@ sub display_cds {
 sub add_cd {
 	my $tmp;
 	my @cd_data;
+	my $newline;
 
 	print "\n";
 	print "Enter CD DATA\n";
+
 	print "Track: ";
-	$tmp = <>;
+	chomp($tmp = <>);
 	push(@cd_data, $tmp);
+
 	print "Artist: ";
-	$tmp = <>;
+	chomp($tmp = <>);
 	push(@cd_data, $tmp);
+
 	print "Album: ";
-	$tmp = <>;
+	chomp($tmp = <>);
 	push(@cd_data, $tmp);
+
 	print "Year: ";
-	$tmp = <>;
+	chomp($tmp = <>);
 	push(@cd_data, $tmp);
+
 	push(@cd_db, [ @cd_data ]);
+	$newline=join(':', @cd_data);
+	open (DATA, ">>data.txt") or die "can't open data.txt for writing: $!\n";
+	print DATA "$newline\n";
+	close (DATA) or die "can't close data.txt: $!\n";
 }
 
 sub remove_cd {
