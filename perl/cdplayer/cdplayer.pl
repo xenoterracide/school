@@ -62,6 +62,7 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
+				else print "not found\n";
 			}
 		} elsif ($menu_input == 2) { # artist
 			print "Artist to search for: ";
@@ -74,6 +75,7 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
+				else print "not found\n";
 			}
 		} elsif ($menu_input == 3) { #album
 			print "Album to search for: ";
@@ -86,6 +88,7 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
+				else print "not found\n";
 			}
 		} elsif ($menu_input == 4) { #year
 			print "Year to search for: ";
@@ -98,6 +101,7 @@ sub search {
 					print "\tAlbum:\t$cd_db[$idx][2]\n";
 					print "\tYear:\t$cd_db[$idx][3]\n";
 				}
+				else print "not found\n";
 			}
 		}
 	} while ($menu_input != 9);
@@ -154,6 +158,7 @@ sub add_cd {
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
+# should actually be named remove track.
 sub remove_cd {
 	my $previous = "\n"; # previous album for comparison
 	my $cd_num;
@@ -171,8 +176,7 @@ sub remove_cd {
 	$cdToRemove = $cd_db[$cd_num][2];
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
 		if ($cdToRemove eq $cd_db[$idx][2]) {
-			my (@a)=splice(@cd_db, $idx, 1);
-			print "debug: splice returns: @a\n";
+			splice(@cd_db, $idx, 5);
 		}
 	};
 	## debug block ##
