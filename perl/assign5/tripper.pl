@@ -1,28 +1,19 @@
 #!/usr/bin/perl
 use warnings;
 use strict;
+use Carp qw(croak);
+require "myfunctions/mileage.pl";
 
-sub mileage
-{
-	# variables
-	my $gas;
-	my $miles;
-	my $mpg;
-	
-	# get user data
-	print "Enter Miles traveled: ";
-	chomp($miles = <>);
-	print "Enter Gas used: ";
-	chomp($gas = <>);
+# variables
+my $miles;
+my $gas;
 
-	# calculate miles per gallon #
-	$mpg = ( $miles / $gas );
+# get user data
+print "Enter Miles traveled: ";
+chomp($miles = <>);
+check_var($miles);
+print "Enter Gas used: ";
+chomp($gas = <>);
+check_var($gas);
 
-	# give user output
-	print "\n";
-	print "\tMiles:\t$miles\n";
-	print "\tGas:\t$gas\n";
-	print "\tMPG:\t$mpg\n";
-	print "\n";
-}
-mileage();
+mileage($miles, $gas);
