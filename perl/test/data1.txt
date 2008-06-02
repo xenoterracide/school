@@ -1,0 +1,4 @@
+foo bar:20000
+blarg blerg:60000
+meh bleh:50000
+bin bash:30000
