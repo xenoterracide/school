@@ -168,7 +168,7 @@ sub add_cd {
 
 # should actually be named remove track.
 sub remove_cd {
-	my $previous = "\n"; # previous album for comparison
+	my $previous = "\n";
 	my $cd_num;
 	my $cdToRemove;
 
@@ -180,24 +180,18 @@ sub remove_cd {
 		$previous = $cd_db[$idx][2];
 	}
 	print "Remove CD #: ";
-	chomp($cd_num = <>);
-	$cdToRemove = $cd_db[$cd_num][2];
+
+	chomp($cd_num = <>); # get the required array number
+	$cdToRemove = $cd_db[$cd_num][2];	# use the array number to look up the
+										# name
+
 	for (my $idx=0; $idx<=$#cd_db; $idx++) {
-		if ($cdToRemove eq $cd_db[$idx][2]) {
-			splice(@cd_db, $idx, 5);
+		# compare the name to the array run it through a while loop to remove 
+		# all enteries
+		while ($cdToRemove eq $cd_db[$idx][2]) {
+			splice(@cd_db, $idx, 1) or die "debug: unable to splice";
 		}
 	};
-	## debug block ##
-	print "remove test";
-	print "\n";
-	for (my $idx=0; $idx<=$#cd_db; $idx++) {
-		if ($previous ne $cd_db[$idx][2]) {
-			print "debug: \t$idx\t$cd_db[$idx][2]\n";
-		}
-		$previous = $cd_db[$idx][2];
-	}
-	## end debug block ##
-
 	print "\n";
 }
 
