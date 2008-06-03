@@ -214,10 +214,58 @@ sub remove_cd {
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
-sub favorites {
+sub favorites
+{
+	my $menu_input;
+	do {
+		print "1:\tadd favorite\n";
+		print "2:\tremove favorite\n";
+		print "9:\texit\n";
+		print "Enter an option: ";
+		chomp($menu_input = <>);
+		if ( $menu_input == 1) {
+			fav_add();
+		} elsif ($menu_input == 2) {
+			fav_del();
+		}
+	} while ($menu_input != 9);
 }
 
-sub main {
+sub fav_add {
+	my $previous;
+	my $cd_num;
+	my $favToAdd;
+
+	print "\n";
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		if ($previous ne $cd_db[$idx][2]) {
+			print "\t$idx\t$cd_db[$idx][2]\n";
+		}
+		$previous = $cd_db[$idx][2];
+	}
+	print "Add Fav #: ";
+
+	chomp($cd_num = <>); # get the required array number
+	$favToAdd = $cd_db[$cd_num][2];	# use the array number to look up the
+										# name
+	open (FAV, ">>favorites.txt")
+		or die "can't open favorites.txt for writing: $!\n";
+	print FAV "$favToAdd\n";
+	close (FAV) or die "can't close data.txt: $!\n";
+}
+sub fav_del
+{
+	my @fav;
+	open (FAV, "favorites.txt")
+		or die "can't open favorites.txt for writing: $!\n";
+	while (<FAV>) {
+		chomp(@fav = <FAV>);
+	}
+		print "@fav\n";
+	close (FAV) or die "can't close data.txt: $!\n";
+}
+sub main
+{
 	read_data();
 	prompt();
 }
