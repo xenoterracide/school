@@ -12,6 +12,12 @@ sub read_data {
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
+# erase data.txt
+sub zero_data {
+	open (DATA, ">data.txt") or die "can't open data.txt for writing: $!\n";
+	print DATA "\n";
+	close (DATA) or die "can't close data.txt: $!\n";
+}
 # initial menu
 sub prompt
 {
@@ -193,6 +199,19 @@ sub remove_cd {
 		}
 	};
 	print "\n";
+
+	zero_data();
+
+	open (DATA, ">>data.txt") or
+		die "can't open data.txt for writing: $!\n";
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		print DATA join(":",
+			$cd_db[$idx][0],
+			$cd_db[$idx][1],
+			$cd_db[$idx][2],
+			$cd_db[$idx][3]), "";
+	}
+	close (DATA) or die "can't close data.txt: $!\n";
 }
 
 sub favorites {
