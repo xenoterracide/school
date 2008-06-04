@@ -261,10 +261,11 @@ sub favorites
 
 # SHOW FAVORITES - cc
 sub fav_show {
-	print "debug: @fav\n";
+	print "\n";
 	for(my $idx=0; $idx <= $#fav; $idx++) {
-		print "$fav[$idx]\n";
+		print "\t$fav[$idx]\n";
 	}
+	print "\n";
 }
 
 # ADD FAVORITE - cc
