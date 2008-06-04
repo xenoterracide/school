@@ -32,12 +32,19 @@ sub read_fav
 }
 
 # ZERO_DATA - empty data.txt before writing - cc
-sub zero_data ($)
+sub zero_data
 {
-	my $data = $_;
-	open (DATA, ">$data") or die "can't open data.txt for writing: $!\n";
+	open (DATA, ">data.txt") or die "can't open data.txt for writing: $!\n";
 	print DATA "";
 	close (DATA) or die "can't close data.txt: $!\n";
+}
+# ZERO FAVS - empty data.txt before writing - cc
+sub zero_fav
+{
+	open (DATA, ">favorites.txt")
+		or die "can't open favorites.txt for writing: $!\n";
+	print DATA "";
+	close (DATA) or die "can't close favorites.txt: $!\n";
 }
 # PROMPT - initiam menu - cc
 sub prompt
@@ -195,7 +202,7 @@ sub add_cd {
 
 # REMOVE_CD - cc
 sub remove_cd {
-	my $previous = "\n";
+	my $previous;
 	my $cd_num;
 	my $cdToRemove;
 
@@ -218,10 +225,10 @@ sub remove_cd {
 		while ($cdToRemove eq $cd_db[$idx][2]) {
 			splice(@cd_db, $idx, 1) or die "debug: unable to splice";
 		}
-	};
+	}
 	print "\n";
 
-	zero_data("data.txt");
+	zero_data();
 
 	open (DATA, ">>data.txt") or
 		die "can't open data.txt for writing: $!\n";
@@ -285,6 +292,8 @@ sub fav_add {
 
 	chomp($cd_num = <>); # get the required array number
 	$favToAdd = $cd_db[$cd_num][2];	# use the array number to look up the
+
+	push(@fav, $favToAdd);
 										# name
 	open (FAV, ">>favorites.txt")
 		or die "can't open favorites.txt for writing: $!\n";
@@ -295,14 +304,33 @@ sub fav_add {
 # DELETE FAVORITE - cc
 sub fav_del
 {
-	my @fav;
-	open (FAV, "favorites.txt")
-		or die "can't open favorites.txt for writing: $!\n";
-	while (<FAV>) {
-		chomp(@fav = <FAV>);
+	my $fav_num;
+	my $favToRemove;
+
+	for (my $idx=0; $idx<=$#fav; $idx++) {
+		print "\t$idx\t$fav[$idx]\n";
 	}
-		print "@fav\n";
-	close (FAV) or die "can't close data.txt: $!\n";
+	print "Enter Favorite # to Remove: ";
+	chomp($fav_num = <>);
+	$favToRemove = $fav[$fav_num];
+
+	for (my $idx=0; $idx<=$#fav; $idx++) {
+		# compare the name to the array run it through a while loop to remove 
+		# all enteries
+		while ($favToRemove eq $fav[$idx]) {
+			splice(@fav, $idx, 1) or die "debug: unable to splice: $!\n";
+		}
+	}
+	print "\n";
+
+	zero_fav();
+
+	open (FAV, ">>favorites.txt")
+		or die "can't open favorites.txt for writing: $!\n";
+	for (my $idx=0; $idx<=$#fav; $idx++) {
+		print FAV "$fav[$idx]\n";
+	}
+	close (FAV) or die "can't close favorites.txt: $!\n";
 }
 
 # MAIN function -cc
