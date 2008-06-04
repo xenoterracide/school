@@ -2,7 +2,8 @@
 #use warnings; #remove for release
 #use strict;
 my @cd_db;
-my @fav;
+my @favorites;
+*fav=\@favorites;
 
 # READ DATA - cc
 sub read_data {
@@ -362,10 +363,9 @@ sub favorites
 
 # SHOW FAVORITES - cc
 sub fav_show {
-	*favorite=\@fav;
 	print "\n";
 	for(my $idx=0; $idx <= $#fav; $idx++) {
-		print "\t$favorite[$idx]\n";
+		print "\t$fav[$idx]\n";
 	}
 	print "\n";
 }
