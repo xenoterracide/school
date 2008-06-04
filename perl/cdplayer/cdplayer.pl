@@ -20,7 +20,8 @@ sub read_data {
 }
 
 # READ FAVORITES - cc
-sub read_fav {
+sub read_fav
+{
 	my $line;
 	open (FAV, "favorites.txt")
 		or die "can't open favorites.txt: $!\n";
@@ -31,8 +32,10 @@ sub read_fav {
 }
 
 # ZERO_DATA - empty data.txt before writing - cc
-sub zero_data {
-	open (DATA, ">data.txt") or die "can't open data.txt for writing: $!\n";
+sub zero_data ($)
+{
+	my $data = $_;
+	open (DATA, ">$data") or die "can't open data.txt for writing: $!\n";
 	print DATA "";
 	close (DATA) or die "can't close data.txt: $!\n";
 }
@@ -218,7 +221,7 @@ sub remove_cd {
 	};
 	print "\n";
 
-	zero_data();
+	zero_data("data.txt");
 
 	open (DATA, ">>data.txt") or
 		die "can't open data.txt for writing: $!\n";
