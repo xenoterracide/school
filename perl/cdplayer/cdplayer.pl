@@ -7,6 +7,9 @@ my @fav;
 # READ DATA - cc
 sub read_data {
 	open (DATA, "data.txt")
+		or open (DATA, ">data.txt")
+		or die "can't open data.txt: $!\n";
+	open (DATA, "data.txt")
 		or die "can't open data.txt: $!\n";
 	while (<DATA>) {
 		chomp(@cd_db = ( @cd_db, [ split(/:/) ] ));
@@ -24,6 +27,7 @@ sub read_fav
 {
 	my $line;
 	open (FAV, "favorites.txt")
+		or open (FAV, ">favorites.txt")
 		or die "can't open favorites.txt: $!\n";
 	while (chomp($line = <FAV>)) {
 		push(@fav, $line)
@@ -57,8 +61,9 @@ sub prompt
 		print "4:\tfavorites\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
+		chomp($menu_input = <>);
 
-		if (chomp($menu_input = <>)) {
+		if ($menu_input == 1) {
 			display();
 		} elsif ( $menu_input == 2) {
 			search();
