@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-use warnings; #remove for release
+#use warnings; #remove for release
 use strict;
 my @cd_db;
 my @fav;
@@ -41,10 +41,10 @@ sub zero_data
 # ZERO FAVS - empty data.txt before writing - cc
 sub zero_fav
 {
-	open (DATA, ">favorites.txt")
+	open (FAV, ">favorites.txt")
 		or die "can't open favorites.txt for writing: $!\n";
-	print DATA "";
-	close (DATA) or die "can't close favorites.txt: $!\n";
+	print FAV "";
+	close (FAV) or die "can't close favorites.txt: $!\n";
 }
 # PROMPT - initiam menu - cc
 sub prompt
