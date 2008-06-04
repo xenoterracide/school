@@ -2,23 +2,41 @@
 use warnings; #remove for release
 use strict;
 my @cd_db;
+my @fav;
 
-# read data.txt
+# READ DATA - cc
 sub read_data {
-	open (DATA, "data.txt") or die "can't open data.txt: $!\n";
+	open (DATA, "data.txt")
+		or die "can't open data.txt: $!\n";
 	while (<DATA>) {
 		@cd_db = ( @cd_db, [ split(/:/) ] );
+		# collection format
+		# $cd_db[$idx][0] = $track
+		# $cd_db[$idx][1] = $artist
+		# $cd_db[$idx][2] = $album
+		# $cd_db[$idx][3] = $year
 	}
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
-# erase data.txt
+# READ FAVORITES - cc
+sub read_fav {
+	my $line;
+	open (FAV, "favorites.txt")
+		or die "can't open favorites.txt: $!\n";
+	while (chomp($line = <FAV>)) {
+		push(@fav, $line)
+	}
+	close (FAV) or die "can't close data.txt: $!\n";
+}
+
+# ZERO_DATA - empty data.txt before writing - cc
 sub zero_data {
 	open (DATA, ">data.txt") or die "can't open data.txt for writing: $!\n";
-	print DATA "\n";
+	print DATA "";
 	close (DATA) or die "can't close data.txt: $!\n";
 }
-# initial menu
+# PROMPT - initiam menu - cc
 sub prompt
 {
 	my $menu_input;
@@ -39,7 +57,7 @@ sub prompt
 	} while ($menu_input != 9);
 }
 
-# search data.txt
+# SEARCH for CD's - cc
 sub search {
 	my $menu_input; # navigate menu
 	my $search_input; #var for regex
@@ -120,7 +138,8 @@ sub search {
 		}
 	} while ($menu_input != 9);
 }
-# modify menu
+
+# MODIFY MENU - cc
 sub modify
 {
 	my $menu_input;
@@ -138,9 +157,7 @@ sub modify
 	} while ($menu_input != 9);
 }
 
-sub display_cds {
-}
-
+# ADD_CD - cc
 sub add_cd {
 	my $tmp;
 	my @cd_data;
@@ -172,7 +189,8 @@ sub add_cd {
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
-# should actually be named remove track.
+
+# REMOVE_CD - cc
 sub remove_cd {
 	my $previous = "\n";
 	my $cd_num;
@@ -211,26 +229,42 @@ sub remove_cd {
 			$cd_db[$idx][2],
 			$cd_db[$idx][3]), "";
 	}
+	print DATA "\n";
 	close (DATA) or die "can't close data.txt: $!\n";
 }
 
+# FAVORITES MENU - cc
 sub favorites
 {
 	my $menu_input;
 	do {
-		print "1:\tadd favorite\n";
-		print "2:\tremove favorite\n";
+		print "1:\tshow favorites\n";
+		print "2:\tadd favorite\n";
+		print "3:\tremove favorite\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
+
 		chomp($menu_input = <>);
-		if ( $menu_input == 1) {
-			fav_add();
+
+		if      ($menu_input == 1) {
+			fav_show();
 		} elsif ($menu_input == 2) {
+			fav_add();
+		} elsif ($menu_input == 3) {
 			fav_del();
 		}
-	} while ($menu_input != 9);
+	}     while ($menu_input != 9);
 }
 
+# SHOW FAVORITES - cc
+sub fav_show {
+	print "debug: @fav\n";
+	for(my $idx=0; $idx <= $#fav; $idx++) {
+		print "$fav[$idx]\n";
+	}
+}
+
+# ADD FAVORITE - cc
 sub fav_add {
 	my $previous;
 	my $cd_num;
@@ -253,6 +287,8 @@ sub fav_add {
 	print FAV "$favToAdd\n";
 	close (FAV) or die "can't close data.txt: $!\n";
 }
+
+# DELETE FAVORITE - cc
 sub fav_del
 {
 	my @fav;
@@ -264,9 +300,13 @@ sub fav_del
 		print "@fav\n";
 	close (FAV) or die "can't close data.txt: $!\n";
 }
+
+# MAIN function -cc
+# serves same purpose of C function of same name
 sub main
 {
 	read_data();
+	read_fav();
 	prompt();
 }
 main();
