@@ -1,0 +1,47 @@
+Group Programming Assignment-1
+Due date for design document: May 9
+Due date for final submission: May 20
+Max points: 100
+Objective: To understand file handling, subroutines, aliases, pointers.
+
+Description: You have to design a 20 CD audio player. 
+
+A CD will have minimum following pieces of information:
+
+- Title of the CD
+- Artist
+- Track  titles
+- Issue year
+
+You have to implement the following options, which are like switches on the player :
+
+
+1.Display all the CDs in sorted order by
+a.Artist name
+b.Issue year
+c.Title
+
+2.Search an artist and display CD information, if found. If not found display, ?not found?.
+
+3.Randomly select a track or CD. 
+
+4.Create a favorite list of CDs and save it, which can be loaded when you run your program again. Here, first you can display CD database, then let the user select some of these CDs as favorite. Make sure that CD database is visible on the screen. 
+5.Add or remove a CD from the collection.
+
+6. Modify CD information.
+
+What do you need to provide as design document?
+
+High level layout of your plan
+Test cases
+Who will do what?
+
+You are required to demonstrate the following in your final implementation:
+-At least 5 subroutines
+- Menu layout
+- Aliases
+- Typeglob
+- Pointer
+
+You have a lot of flexibility in the implementation. Just make sure to include the stated requirements.
+
