@@ -51,20 +51,33 @@ sub prompt
 {
 	my $menu_input;
 	do {
-		print "1:\tsearch\n";
-		print "2:\tmodify cd's\n";
-		print "3:\tfavorites\n";
+		print "1:\tdisplay\n";
+		print "2:\tsearch\n";
+		print "3:\tmodify cd's\n";
+		print "4:\tfavorites\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
-		chomp($menu_input = <>);
-		if ( $menu_input == 1) {
+
+		if (chomp($menu_input = <>)) {
+			display();
+		} elsif ( $menu_input == 2) {
 			search();
-		} elsif ( $menu_input == 2 ) {
-			modify();
 		} elsif ( $menu_input == 3 ) {
+			modify();
+		} elsif ( $menu_input == 4 ) {
 			favorites();
 		}
 	} while ($menu_input != 9);
+}
+# DISPLAY CD's - cc
+sub display
+{
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		print "\tTrack:\t$cd_db[$idx][0]\n";
+		print "\tArtist:\t$cd_db[$idx][1]\n";
+		print "\tAlbum:\t$cd_db[$idx][2]\n";
+		print "\tYear:\t$cd_db[$idx][3]\n";
+	}
 }
 
 # SEARCH for CD's - cc
