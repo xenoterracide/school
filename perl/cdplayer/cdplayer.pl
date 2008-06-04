@@ -9,7 +9,7 @@ sub read_data {
 	open (DATA, "data.txt")
 		or die "can't open data.txt: $!\n";
 	while (<DATA>) {
-		@cd_db = ( @cd_db, [ split(/:/) ] );
+		chomp(@cd_db = ( @cd_db, [ split(/:/) ] ));
 		# collection format
 		# $cd_db[$idx][0] = $track
 		# $cd_db[$idx][1] = $artist
@@ -156,6 +156,7 @@ sub modify
 	do {
 		print "1:\tadd cd\n";
 		print "2:\tremove cd\n";
+		print "3:\tmodify cd\n";
 		print "9:\texit\n";
 		print "Enter an option: ";
 		chomp($menu_input = <>);
@@ -163,6 +164,8 @@ sub modify
 			add_cd();
 		} elsif ( $menu_input == 2 ) {
 			remove_cd();
+		} elsif ( $menu_input == 3 ) {
+			modify_cd();
 		}
 	} while ($menu_input != 9);
 }
@@ -226,6 +229,79 @@ sub remove_cd {
 			splice(@cd_db, $idx, 1) or die "debug: unable to splice";
 		}
 	}
+	print "\n";
+
+	zero_data();
+
+	open (DATA, ">>data.txt") or
+		die "can't open data.txt for writing: $!\n";
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		print DATA join(":",
+			$cd_db[$idx][0],
+			$cd_db[$idx][1],
+			$cd_db[$idx][2],
+			$cd_db[$idx][3]), "";
+	}
+	print DATA "\n";
+	close (DATA) or die "can't close data.txt: $!\n";
+}
+# MODIFY CD - cc
+sub modify_cd
+{
+	my $previous;
+	my $cd_num;
+	my $track_num;
+	my $cdToModify;
+	my $modSelect;
+
+	print "\n";
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		if ($previous ne $cd_db[$idx][2]) {
+			print "\t$idx\t$cd_db[$idx][2]\n";
+		}
+		$previous = $cd_db[$idx][2];
+	}
+	print "Modify CD #: ";
+
+	chomp($cd_num = <>); # get the required array number
+	$cdToModify = $cd_db[$cd_num][2];	# use the array number to look up the
+										# name
+
+	for (my $idx=0; $idx<=$#cd_db; $idx++) {
+		if ($cdToModify eq $cd_db[$idx][2]) {
+			print "\t$idx\t$cd_db[$idx][0]\n";
+		}
+	}
+	print "Modify Track #: ";
+	chomp($track_num = <>);
+
+	do {
+		print "1\tTrack\n";
+		print "2\tArtist\n";
+		print "3\tAlbum\n";
+		print "4\tYear\n";
+		print "9\texit\n";
+		print "Modify: ";
+		chomp($modSelect = <>);
+
+		if ($modSelect == 1) {
+			print "Current Track: $cd_db[$track_num][0]\n";
+			print "New Value: ";
+			chomp($cd_db[$track_num][0] = <>);
+		} elsif ($modSelect == 2 ) {
+			print "Current Artist: $cd_db[$track_num][1]\n";
+			print "New Value: ";
+			chomp($cd_db[$track_num][1] = <>);
+		} elsif ($modSelect == 3 ) {
+			print "Current Album: $cd_db[$track_num][2]\n";
+			print "New Value: ";
+			chomp($cd_db[$track_num][2] = <>);
+		} elsif ($modSelect == 4 ) {
+			print "Current Year: $cd_db[$track_num][3]\n";
+			print "New Value: ";
+			chomp($cd_db[$track_num][3] = <>);
+		}
+	} while ($modSelect != 9);
 	print "\n";
 
 	zero_data();
