@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #use warnings; #remove for release
-use strict;
+#use strict;
 my @cd_db;
 my @fav;
 
@@ -362,9 +362,10 @@ sub favorites
 
 # SHOW FAVORITES - cc
 sub fav_show {
+	*favorite=\@fav;
 	print "\n";
 	for(my $idx=0; $idx <= $#fav; $idx++) {
-		print "\t$fav[$idx]\n";
+		print "\t$favorite[$idx]\n";
 	}
 	print "\n";
 }
