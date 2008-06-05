@@ -1,3 +1,0 @@
-zen far:80000
-blarg blerg:60000
-bz bing:50001
