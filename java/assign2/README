@@ -9,3 +9,7 @@ Include a separate Word document with your assignment and explain why each will
 produce a compiler error and what you would do to fix the problem.  Explain 
 what is happening in 5 and 6 and why this code will prevent a possible compiler 
 error.
+
+PE #1
+a: Write Java statements that import the classes Scanner, FileReader, and 
+*  PrintWriter from the packages java.util and java.io
