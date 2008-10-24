@@ -12,5 +12,9 @@ public class Ch3_PrExercise1
 {
 	public static void main(String[] args)
 	{
+		Scanner inFile =
+			new Scanner(new FileReader("text.txt");
+		PrintWriter outFile =
+			new PrintWriter("text.txt");
 	}
 }

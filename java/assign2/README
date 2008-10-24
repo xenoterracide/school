@@ -12,4 +12,7 @@ error.
 
 PE #1
 a: Write Java statements that import the classes Scanner, FileReader, and 
-*  PrintWriter from the packages java.util and java.io
+PrintWriter from the packages java.util and java.io
+
+b: Write statements that declare inFile to be a reference variable of type
+Scanner and outFile to be a reference of variable of type PrintWriter
