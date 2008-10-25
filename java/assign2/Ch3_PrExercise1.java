@@ -42,5 +42,8 @@ public class Ch3_PrExercise1
 		outFile.println("The character that comes after " + char1 +
 			" in the Unicode set is " + char2 + ".");
 		outFile.println("The numuct of" + num3 + " and " + num4 +" = " + prod +".");
+
+		inFile.close();
+		outFile.close();
 	}
 }
