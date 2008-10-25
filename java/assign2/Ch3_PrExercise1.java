@@ -4,9 +4,8 @@
  * *** Purpose:
  * **************************************************************/
 
-import java.util.Scanner;
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.util.*;
+import java.io.*;
 
 public class Ch3_PrExercise1
 {
