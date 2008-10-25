@@ -20,3 +20,20 @@ Scanner and outFile to be a reference of variable of type PrintWriter
 c: the program will read data fromt he file inData.txt and write output to the 
 file outData.dat. Write statements to open both these files, associate inFile 
 with inData.txt, and associate outFile with outData.dat
+
+d: suppose that the file inData.txt contains the following data:
+
+56 38
+A
+7 8
+
+write statements so that after the program executes, the contents of the 
+outData.dat are as shown below. if necessary, declare additional variables.  
+your statements should be general enough so that if the content of the input 
+file changes and the program is run again (without editing and recompiling), it 
+outputs the appropriate results:
+
+The sum of 56 and 38 = 94.
+The character that comes after A in the Unicode set is B.
+The product of a 7 and 8 = 56.
+
