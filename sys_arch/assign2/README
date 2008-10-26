@@ -8,3 +8,13 @@ to language. investigat4e a commonly used development environment for
 application tools such as microsft visual studio (www.microsoft.com). what 
 tools and techniques (for example, unicode data types and string tables) are 
 supported for developing multilingual programs?
+
+3.) Object-oriented programming has been adopted widely due to its inherent 
+ability to reuse code. Most application development software provides class 
+libraries and extensive support for complex data structures, including various 
+types of linked lists. Investigate one of these libraries, such as Microsoft 
+Foundation Classes (www.microsoft.com) or the Java 2 Platform (java.sun.com) 
+application program interface (API). what data structures are supported by they 
+library? what types of data are recommended for use with each data structure 
+object? which classes contain which data structures, and what methods does the 
+library provide?
