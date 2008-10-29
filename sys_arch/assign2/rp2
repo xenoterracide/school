@@ -1,5 +1,0 @@
-Java uses Resource Bundles to facilitate international localization.  Resource 
-bundles have a variety of methods in which language text can be specified. They 
-also include inheritance which means the en_US and en_GB inherit all the things 
-in en. a more detailed summary with examples can be found at 
-http://java.sun.com/developer/technicalArticles/Intl/ResourceBundles/ .
