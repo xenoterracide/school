@@ -1,1 +1,12 @@
 ch6 p254 Review Question 9, 12, 13
+
+9. What is a buffer? Why might one be used?
+
+12. Describe how scaling up differs from scaling out. Given the speed 
+difference between a typical system bus and a typical high speed network, is it 
+reasonable to assume that both approaches can yield similar increases in total 
+computational power.
+
+13. What is a multicore processor? what are it's advantages compared to 
+multi-cpu architecture? why have multicore processors only recently become 
+available?
