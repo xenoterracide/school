@@ -1,0 +1,10 @@
+9. A buffer is temporary memory used to hold data while it is being moved from 
+one place to another. buffers are used when there is a difference in the rate 
+at which data is received and the rate at which it can be processed.
+
+12. scaling up generally means upgrading a system to a more powerful system.  
+whilst scaling out means adding systems. although it is reasonable to assume 
+that scaling up and scaling out could have the same effects it is highly 
+circumstantial.
+
+13.
