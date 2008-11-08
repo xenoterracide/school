@@ -21,11 +21,12 @@
  * limitations under the License.
  */
 import javax.swing.*;
-import java.awt.*
-import java.awt.event.*;
+import java.awt.*;
 
 public class pe6 extends JFrame
 {
+	private JLabel StrInR, StrOutR;
+
     public static String swapCase(String str) {
         int strLen;
         if (str == null || (strLen = str.length()) == 0) {
@@ -57,7 +58,25 @@ public class pe6 extends JFrame
         }
         return buffer.toString();
     }
+	public pe6()
+	{
+		setTitle("swapCase");
+
+		StrInR  = new JLabel("enter string: ", SwingConstants.LEFT);
+		StrOutR = new JLabel("converted string: ", SwingConstants.LEFT);
+
+		Container pane = getContentPane();
+		pane.setLayout(new GridLayout(2, 1));
+
+		pane.add(StrInR);
+		pane.add(StrOutR);
+
+		setSize(400, 100);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
 	public static void main(String[] args)
 	{
+		pe6 gui = new pe6();
 	}
 }
