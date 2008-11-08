@@ -1,7 +1,8 @@
 /**************************************************************
- * *** Date:
+ * *** Date: Sat Nov  8 13:21:12 EST 2008
  * *** Name: Caleb Cushing
- * *** Purpose:
+ * *** Purpose: count down from 30 to zero, printing each number, except 27 
+ * until the program reaches 5
  * **************************************************************/
 public class loop2
 {
