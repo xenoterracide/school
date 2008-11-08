@@ -1,2 +1,5 @@
 pg. 374, PE #6 (10 pts).
-Phase I of Final Project (40 points)
+
+6. Write a GUI program to convert all the lowercase letters in a string to 
+uppercase letters, and vice versa. For example, Alb34eRt will be converted to 
+aLB34ErT.
