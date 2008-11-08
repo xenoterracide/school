@@ -22,6 +22,7 @@
  */
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class pe6 extends JFrame
 {
@@ -60,6 +61,26 @@ public class pe6 extends JFrame
         }
         return buffer.toString();
     }
+	private class SwapCaseHandler implements ActionListener
+	{
+		public void actionPerformed(ActionEvent e)
+		{
+			String UserInput, SwappedCase;
+
+			UserInput = UserInputR.getText();
+
+			SwappedCase = swapCase(UserInput);
+
+			SwappedCaseR.setText("" + SwappedCase);
+		}
+	}
+	private class ExitHandler implements ActionListener
+	{
+		public void actionPerformed(ActionEvent e)
+		{
+			System.exit(0);
+		}
+	}
 	public pe6()
 	{
 		setTitle("swapCase");
@@ -71,7 +92,12 @@ public class pe6 extends JFrame
 		SwappedCaseR = new JTextField(10);
 
 		swapCaseB = new JButton("Swap Case");
+		SwapCaseHandler scHandler = new SwapCaseHandler();
+		swapCaseB.addActionListener(scHandler);
+
 		exitB = new JButton("Exit");
+		ExitHandler eHandler = new ExitHandler();
+		exitB.addActionListener(eHandler);
 
 		Container pane = getContentPane();
 		pane.setLayout(new GridLayout(3, 2));
