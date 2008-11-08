@@ -27,6 +27,7 @@ public class pe6 extends JFrame
 {
 	private JLabel StrInL, StrOutL;
 	private JTextField UserInputR, SwappedCaseR;
+	private Jbutton swapCaseB, exitB;
 
     public static String swapCase(String str) {
         int strLen;
@@ -69,13 +70,18 @@ public class pe6 extends JFrame
 		UserInputR   = new JTextField(10);
 		SwappedCaseR = new JTextField(10);
 
+		swapCaseB = new Jbutton("Swap Case");
+		exitB = new Jbutton("Exit");
+
 		Container pane = getContentPane();
-		pane.setLayout(new GridLayout(2, 1));
+		pane.setLayout(new GridLayout(3, 2));
 
 		pane.add(StrInL);
 		pane.add(UserInputR);
 		pane.add(StrOutL);
 		pane.add(SwappedCaseR);
+		pane.add(swapCaseB);
+		pane.add(exitB);
 
 		setSize(400, 100);
 		setVisible(true);
