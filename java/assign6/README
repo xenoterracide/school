@@ -1,0 +1,20 @@
+Loop (Method) Assignment (40 pts.).
+
+Loop(Method) Assignment: 
+
+Access the Loop-Assign document from Week #5. You have already written the code 
+for the four loop problems which you will now combine into one program with 
+four distinct methods. For this assignment you will write methods, two value 
+returning methods and two void methods. You may choose which of the four 
+problems are coded into which method. Each method must represent one of the 4 
+distinct loop problems. The methods must include:
+
+one value-returning method with a parameter
+
+one value-returning method without a parameter
+
+one void method with a parameter
+
+one void method without a parameter
+
+Your program must compile and run.
