@@ -25,7 +25,8 @@ import java.awt.*;
 
 public class pe6 extends JFrame
 {
-	private JLabel StrInR, StrOutR;
+	private JLabel StrInL, StrOutL;
+	private JTextField UserInputR, SwappedCaseR;
 
     public static String swapCase(String str) {
         int strLen;
@@ -62,14 +63,19 @@ public class pe6 extends JFrame
 	{
 		setTitle("swapCase");
 
-		StrInR  = new JLabel("enter string: ", SwingConstants.LEFT);
-		StrOutR = new JLabel("converted string: ", SwingConstants.LEFT);
+		StrInL  = new JLabel("enter string: ", SwingConstants.LEFT);
+		StrOutL = new JLabel("converted string: ", SwingConstants.LEFT);
+		
+		UserInputR   = new JTextField(10);
+		SwappedCaseR = new JTextField(10);
 
 		Container pane = getContentPane();
 		pane.setLayout(new GridLayout(2, 1));
 
-		pane.add(StrInR);
-		pane.add(StrOutR);
+		pane.add(StrInL);
+		pane.add(UserInputR);
+		pane.add(StrOutL);
+		pane.add(SwappedCaseR);
 
 		setSize(400, 100);
 		setVisible(true);
