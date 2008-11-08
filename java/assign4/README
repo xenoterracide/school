@@ -1,0 +1,21 @@
+
+Loop Assignment (40 pts).
+
+Loop Assignment: 
+
+Write, compile, and run a Java program that demonstrates the following:
+
+ #1. Uses a while loop to count down every odd number from 40 to zero, printing 
+ each odd number down to zero, except the number 3 and 33. Program must use a 
+ continue and an if statement.
+
+ #2. Uses a while loop to count down from 30 to zero, printing each number, 
+ except 27 until the program reaches 5 and then terminates the loop and the 
+ program. Program must use a break statement.
+
+ #3. Convert #1 to a for loop.
+
+ #4. Convert #2 to a do-while loop.
+
+Include each piece of code and screen shot respectively of each program?s 
+output in a Word document.
