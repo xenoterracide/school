@@ -26,11 +26,7 @@ import java.awt.event.*;
 
 public class pe6 extends JFrame
 {
-	public static void main(String[] args)
-	{
-		String str;
-		String StrOut;
-
+    public static String swapCase(String str) {
         int strLen;
         if (str == null || (strLen = str.length()) == 0) {
             return str;
@@ -59,6 +55,9 @@ public class pe6 extends JFrame
             buffer.append(tmp);
             whitespace = Character.isWhitespace(ch);
         }
-        StrOut = buffer.toString();
+        return buffer.toString();
+    }
+	public static void main(String[] args)
+	{
 	}
 }
