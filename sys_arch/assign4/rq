@@ -7,4 +7,8 @@ whilst scaling out means adding systems. although it is reasonable to assume
 that scaling up and scaling out could have the same effects it is highly 
 circumstantial.
 
-13.
+13. A multicore cpu is one that has multiple sets of logic, computation, and 
+control circutry. cores can share on chip caches, providing increased 
+performance. MultiCPU sysystems are controlled by the OS kernel which in some 
+cases is not very good a distributing the load while cores are generally 
+controlled by the cpu itself.
