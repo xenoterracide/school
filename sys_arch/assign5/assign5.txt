@@ -13,3 +13,7 @@ clock drift.
 14.) odd parity counts the number of 1's in the byte and sets the parity bit to 
 1 if the number is even, even parity is the opposite setting it 0 if the count 
 is even.
+
+4.) a bitmap is an image where each pixel is mapped to a bit. chromatic 
+resolution is essentionally how many colors the bitmap can support, the more 
+colors it supports the more bits required for each pixel to describe it.
