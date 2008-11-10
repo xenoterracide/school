@@ -20,3 +20,5 @@ colors it supports the more bits required for each pixel to describe it.
 
 6.) jpeg is a standardized compression format for images. mpeg is to movies as 
 jpeg is to images
+
+7.) durability, performance, cost (the latter 2 have ceased to be an issue)
