@@ -1,4 +1,0 @@
-Java supports String and Number and support characters and 'numbers' 
-respectively. The Number Superclass supports methods such as converting from a 
-float to integer. the String class supports string formatting, concatenating, 
-and length determination
