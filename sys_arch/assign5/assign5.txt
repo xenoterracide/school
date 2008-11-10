@@ -17,3 +17,6 @@ is even.
 4.) a bitmap is an image where each pixel is mapped to a bit. chromatic 
 resolution is essentionally how many colors the bitmap can support, the more 
 colors it supports the more bits required for each pixel to describe it.
+
+6.) jpeg is a standardized compression format for images. mpeg is to movies as 
+jpeg is to images
