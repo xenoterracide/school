@@ -1,0 +1,16 @@
+9. Describe Simplex, half-duplex, and full-duplex transmission. compare and 
+contrast them in terms of cost and effective data transfer rate.
+
+Simplex is where a single wire can only transmit data 1 direction, half-duplex 
+allows it to transmit it bi-directionally, full-duplex essentially uses 2 lines 
+in simplex mode, transmitting in opposite directons. Given todays costs there 
+is little in the way of cost advantages over full-duplex lines, given most 
+lines must carry data both ways, and half-duplex can be extremely error prone.
+
+12. What are the differences between synchrynous and asynchrynous data 
+transmission?
+
+synchrynous transmissions are constantly synching clocks and sending data 
+frames of the sames size, at consistent intervals. Asyschrynous transmissions 
+are as/needed and clocks must be resysnced at transmission to compensate for 
+clock drift.
