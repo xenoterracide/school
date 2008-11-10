@@ -5,8 +5,11 @@ costs there is little in the way of cost advantages over full-duplex lines,
 given most lines must carry data both ways, and half-duplex can be extremely 
 error prone.
 
-
-10.) synchrynous transmissions are constantly synching clocks and sending data 
+12.) synchrynous transmissions are constantly synching clocks and sending data 
 frames of the sames size, at consistent intervals. Asyschrynous transmissions 
 are as/needed and clocks must be resysnced at transmission to compensate for 
 clock drift.
+
+14.) odd parity counts the number of 1's in the byte and sets the parity bit to 
+1 if the number is even, even parity is the opposite setting it 0 if the count 
+is even.
