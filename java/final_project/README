@@ -1,0 +1,22 @@
+DESCRIPTION
+
+Create a user authentication and management system for the web.
+
+
+COMPONENTS & ARCHITECTURE
+
+use MVC pattern
+Apache w/ mod_jk for http server
+Tomcat for JSP/Servlet processing
+PostgreSQL for RDBMS
+Hibernate (potentially) as ORM
+
+
+VIEWS
+
+Register - username, password, verify password fields
+Login - username, password, remember me fields
+Administration - disable account, disable registration, delete account
+
+notes: passwords are hashed using blowfish algorithm JCE appears to implement 
+this.
