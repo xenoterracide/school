@@ -1,0 +1,8 @@
+CREATE TABLESPACE NEWADMIN 
+DATAFILE <datafile> SIZE <nn> AUTOEXTEND <ext> 
+EXTENT MANAGEMENT <mgt_mode>
+<logging>
+<status>
+MINIMUM EXTENT <nn>
+DEFAULT STORAGE (INITIAL <nn> NEXT <nn> PCTINCREASE <nn> 
+                 MINEXTENTS <nn> MAXEXTENTS <nn>);

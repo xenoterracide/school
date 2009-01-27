@@ -1,0 +1,35 @@
+REM ***************************
+REM       Revise all occurrances of 
+REM            ORACLE_BASE to a real path name.
+REM **************************
+REM       Run script when logged in as:
+REM            SYS AS SYSDBA
+REM **************************
+set echo on
+spool ORACLE_BASE\admin\trial02\create\CreateDB.log
+startup nomount pfile="ORACLE_BASE\admin\trial02\pfile\inittrial02.ora";
+CREATE DATABASE trial02
+MAXINSTANCES 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+DATAFILE 'ORACLE_BASE\oradata\trial02\system01.dbf' SIZE 300M
+   REUSE AUTOEXTEND ON NEXT 10240K MAXSIZE UNLIMITED
+   EXTENT MANAGEMENT LOCAL
+SYSAUX DATAFILE ' ORACLE_BASE\oradata\trial02\sysaux01.dbf' SIZE 120M
+   REUSE AUTOEXTEND ON NEXT 10240K MAXSIZE UNLIMITED
+DEFAULT TEMPORARY TABLESPACE TEMP TEMPFILE 
+   'ORACLE_BASE\oradata\trial02\temp01.dbf' SIZE 20M
+   REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+UNDO TABLESPACE "UNDOTBS1" DATAFILE
+   'ORACLE_BASE\oradata\trial02\undotbs01.dbf' SIZE 200M
+   REUSE AUTOEXTEND ON NEXT 5120K MAXSIZE UNLIMITED
+CHARACTER SET WE8MSWIN1252
+NATIONAL CHARACTER SET AL16UTF16
+LOGFILE GROUP 1 ('ORACLE_BASE\oradata\trial02\redo01.log') SIZE 10240K,
+   GROUP 2 ('ORACLE_BASE\oradata\trial02\redo02.log') SIZE 10240K,
+   GROUP 3 ('ORACLE_BASE\oradata\trial02\redo03.log') SIZE 10240K
+USER SYS IDENTIFIED BY password
+USER SYSTEM IDENTIFIED BY password;
+spool off
+set echo off

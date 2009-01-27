@@ -1,0 +1,64 @@
+Global Globe Business Rules
+
+1. Employees:
+	a. All employees must have a first and last name and job title
+           CONSTRAINT Descriptions: ___________________
+
+        b. Valid job titles are: EDITOR, CHIEF EDITOR, WRITER, 
+                                 FREELANCE WRITER, MANAGER, DELIVERY PERSON,
+                                 OFFICE ASSISTANT, PRESIDENT, PROGRAMMER, DBA.
+           CONSTRAINT NAME: ___________________
+
+2. Editor Revenue:
+	a. Each editor has one row in the EDITOR_REVENUE table that
+           shows the total annual revenue for the current year. The
+           primary key for this table is the editor's employee id.
+           CONSTRAINT NAME: ___________________
+
+3. Customers:
+	a. Each customer has a unique id that is the primary key.
+           CONSTRAINT NAME: ___________________
+
+	b. If a customer has a business name, he must also have a business type.
+           CONSTRAINT NAME: ___________________
+
+	c. Valid business types are: Corporation, Partnership, 
+		Sole Proprietor, Non-profit, and Other. The default is Other.
+           CONSTRAINT NAME: ___________________
+
+	d. Valid discount percentages range from 4.0 to 15.8.
+           CONSTRAINT NAME: ___________________
+
+
+4. Classified section:
+	a. Each section has a unique section id that is its primary key.
+           CONSTRAINT NAME: ___________________
+
+	b. A section must have a non-null section title.
+           CONSTRAINT NAME: ___________________
+
+	c. The priority rate per word must be between $.50 and $5.75 but can also be null.
+            CONSTRAINT NAME: ___________________
+
+5. Classified Ad:
+	a. Each ad has a unique sequence-generated number as its identifier.
+           CONSTRAINT NAME: ___________________
+
+	b. Each ad must be categorized in a valid classified section. This 
+		constraint is deferrable.
+           CONSTRAINT NAME: ___________________
+
+	c. Each ad must have a valid intake editor. If the editor's 
+		employee record is deleted, all corresponding ads have the
+ 		intake editor field set to null.
+           CONSTRAINT NAME: ___________________
+
+	d. Valid priority codes are: H for high priority, and L for low
+ 		priority.
+           CONSTRAINT NAME: ___________________
+
+	e. Each ad must be connected to a customer in the CUSTOMER table.
+		If the customer's record is removed, the ad remains but the customer_id
+		becomes null.
+           CONSTRAINT NAME: ___________________
+

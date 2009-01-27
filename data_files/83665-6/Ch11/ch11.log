@@ -1,0 +1,62 @@
+
+SQL*Loader: Release 10.2.0.1.0 - Production on Thu Dec 15 23:47:54 2005
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+Control File:   C:\Manuscripts\CourseTech\Chapter11\data\ch11.ctl
+Data File:      data\Chapter11\ch11.dat
+  Bad File:     C:\Manuscripts\CourseTech\Chapter11\data\ch11.bad
+  Discard File: C:\Manuscripts\CourseTech\Chapter11\data\ch11.dsc 
+ (Allow 2 discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 1000000
+Continuation:    none specified
+Path used:      Direct
+
+Table CLIENT, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+CLIENT_ID                           FIRST     4           INTEGER              
+FIRST_NAME                           NEXT    10   ,       CHARACTER            
+LAST_NAME                            NEXT    20   ,       CHARACTER            
+CONTACT_PHONE                        NEXT    15   ,       CHARACTER            
+CONTACT_EMAIL                        NEXT    30   ,       CHARACTER            
+
+
+Referential Integrity Constraint/Trigger Information:
+NULL, UNIQUE, and PRIMARY KEY constraints are unaffected.
+
+Trigger CLASSMATE."UCLIENT" was disabled before the load.
+SQL*Loader-500: Unable to open file (data\Chapter11\ch11.dat)
+SQL*Loader-553: file not found
+SQL*Loader-509: System error: The system cannot find the file specified.
+SQL*Loader-2026: the load was aborted because SQL Loader cannot continue.
+
+Table CLIENT:
+  0 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+Bind array size not used in direct path.
+Column array  rows :    5000
+Stream buffer bytes:  256000
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             0
+Total logical records rejected:         0
+Total logical records discarded:        0
+Total stream buffers loaded by SQL*Loader main thread:        0
+Total stream buffers loaded by SQL*Loader load thread:        0
+
+Run began on Thu Dec 15 23:47:54 2005
+Run ended on Thu Dec 15 23:48:02 2005
+
+Elapsed time was:     00:00:07.78
+CPU time was:         00:00:00.09
