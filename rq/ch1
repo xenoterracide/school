@@ -1,0 +1,20 @@
+1) T
+2) oracle 10g database, oracle net services, java/web, OEM, OEM wizards, SQL 
+*plus, utilities, pre-compilers, add-ons
+3) provides the network link between the database and most applications that 
+communicate with the database
+4) allows utilities to be run on remote machines and to remote machines
+5) precompiler translates embedded sql into a native 3gl such as C and compiles 
+it
+6) Administrator includes user management tools where runtime is for 
+programmers
+7) F
+8) T
+9) Where you need multiple installations, or a layout designed for your company
+10) runInstaller -responsfile resp0901.txt -silent
+11) allows you to put restructure, put things on different devices...
+12) T
+13) F
+14) F (not in this chapter)
+15) F
+16) F
