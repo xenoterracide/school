@@ -17,4 +17,13 @@ single disk also slows things down, as writes/reads will take longer.
 12.) sequential number that is increment for each change that modifies the 
 physical database
 13.) you use redo logs to repair the damage
-14.)
+14.) when you need duplicate archives
+15.) V$LOG
+16.)
+17.) True
+18.) E
+19.) OWNER
+20.) GV$
+21.) DBA_TABLES is tables soley for the dba, while USER solely applys to that 
+user.
+22.) find tables owned by a user, get stats.
