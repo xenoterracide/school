@@ -1,0 +1,5 @@
+1.)shutdown db, copy the file, update init.ora, restart db
+3.)to insure against the total loss of the file
+6.)archive log automatically archives redo logs. no archive log is the opposite
+7.) a, b
+13.) you use redo logs to repair the damage
