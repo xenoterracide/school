@@ -1,5 +1,20 @@
 1.)shutdown db, copy the file, update init.ora, restart db
+2.)False
 3.)to insure against the total loss of the file
+4.) DB_CREATE_FILE_DEST specifies location of omf managed db files
+	DB_CREATE_ONLINE_LOG_DEST location of control files, redo log files
+	CONTROL_FILES must be null
+5.) True
 6.)archive log automatically archives redo logs. no archive log is the opposite
 7.) a, b
+8.)
+9.) D
+10.) it doesn't. but the most obvious reason is if the disk fails then your 
+other log files were on the same disk. this reason does not take into account, 
+accidental, intentional deletion or corrupt sectors on a disk. having them on a 
+single disk also slows things down, as writes/reads will take longer.
+11.) memory
+12.) sequential number that is increment for each change that modifies the 
+physical database
 13.) you use redo logs to repair the damage
+14.)
