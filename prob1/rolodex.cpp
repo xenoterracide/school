@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <vector>
 
@@ -33,9 +34,9 @@ void get_contact()
 	cout << "City: ";
 	cin  >> new_contact.city;
 	cout <<  "State (2 char code): ";
-	cin  >> new_contact.state;
+	cin  >> setw(2) >> new_contact.state;
 	cout <<  "ZIP code: ";
-	cin  >> new_contact.zip;
+	cin  >> setw(5) >> new_contact.zip;
 
 	new_contact.record = contact.size();
 
