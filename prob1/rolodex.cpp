@@ -18,9 +18,9 @@ struct contact_rec
 	char zip[5];
 } new_contact;
 
-vector<contact_rec> contacts;
+vector<contact_rec> contact;
 
-int get_contact()
+void get_contact()
 {
 	cout << "First Name: ";
 	cin  >> new_contact.fname;
@@ -37,7 +37,9 @@ int get_contact()
 	cout <<  "ZIP code: ";
 	cin  >> new_contact.zip;
 
-	return 0;
+	new_contact.record = contact.size();
+
+	contact.push_back(new_contact);
 }
 
 int main()
