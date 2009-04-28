@@ -1,4 +1,4 @@
-#define DEBUG
+// #define DEBUG
 
 #include <ctype.h>
 #include <fstream>
@@ -36,7 +36,7 @@ int str_isnum(string str)
 			<< "DEBUG: isdigit(str.at(i)): " << isdigit(str.at(i)) << "\n";
 #endif
 
-		if ( isdigit(str.at(i)) != 0 ) {
+		if ( isdigit(str.at(i)) == 0 ) {
 			return 1;
 		}
 	}
