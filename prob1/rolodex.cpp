@@ -13,8 +13,8 @@ struct contact_rec
 	string addr1;
 	string addr2;
 	string city;
-	char state[2];
-	char zip[5];
+	string state;
+	string zip;
 } new_contact;
 
 vector<contact_rec> contact;
