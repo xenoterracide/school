@@ -53,10 +53,12 @@ void get_contact()
 	while ( valid != true ) {
 		cout <<  "ZIP code: ";
 		getline ( cin, tmp, '\n');
-		if ( tmp.size() == 5 && str_isnum(tmp) == true ) {
+		if ( tmp.size() == 5 && str_isnum(tmp) == 0 ) {
 			valid = true;
 		} else {
-			cout << "Invalid zip code";
+			cout << "error: Invalid zip code\n"
+				<< "DEBUG: " << tmp.size() << "\n"
+				<< "DEBUG: " << str_isnum(tmp) << "\n";
 		}
 	}
 		
