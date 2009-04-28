@@ -1,3 +1,5 @@
+#define DEBUG
+
 #include <ctype.h>
 #include <fstream>
 #include <iostream>
@@ -21,14 +23,24 @@ struct contact_rec
 
 vector<contact_rec> contact;
 
-bool str_isnum(string str)
+int str_isnum(string str)
 {
-	for ( int i = 0; i < str.size(); i++) {
+#ifdef DEBUG
+		cout << "DEBUG: in str_isnum\n";
+#endif
+
+	for ( size_t i = 0; i < str.size(); i++) {
+
+#ifdef DEBUG
+		cout << "DEBUG: str.at(i): " << str.at(i) << "\n"
+			<< "DEBUG: isdigit(str.at(i)): " << isdigit(str.at(i)) << "\n";
+#endif
+
 		if ( isdigit(str.at(i)) != 0 ) {
-			return false;
+			return 1;
 		}
 	}
-	return true;
+	return 0;
 }
 
 void get_contact()
@@ -56,9 +68,13 @@ void get_contact()
 		if ( tmp.size() == 5 && str_isnum(tmp) == 0 ) {
 			valid = true;
 		} else {
-			cout << "error: Invalid zip code\n"
-				<< "DEBUG: " << tmp.size() << "\n"
-				<< "DEBUG: " << str_isnum(tmp) << "\n";
+			cout << "error: Invalid zip code\n";
+#ifdef DEBUG
+			cout
+				<< "DEBUG: in get_contact()\n"
+				<< "DEBUG: tmp.size(): " << tmp.size() << "\n"
+				<< "DEBUG: str_isnum(tmp): " << str_isnum(tmp) << "\n";
+#endif
 		}
 	}
 		
