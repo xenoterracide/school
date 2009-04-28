@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -43,8 +44,12 @@ void get_contact()
 
 void print_csv_rolodex()
 {
+	ofstream csv;
+
+	csv.open("roldex.csv")
+
 	for (size_t i = 0; i < contact.size(); i++) {
-		cout
+		csv
 			<< contact.at(i).fname << ","
 			<< contact.at(i).lname << ","
 			<< contact.at(i).addr1 << ","
@@ -53,6 +58,7 @@ void print_csv_rolodex()
 			<< contact.at(i).state << ","
 			<< contact.at(i).zip << "\n";
 	}
+	csv.close();
 }
 
 int main()
