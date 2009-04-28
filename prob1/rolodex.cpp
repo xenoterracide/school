@@ -14,8 +14,6 @@ struct contact_rec
 	string addr2;
 	string city;
 	char state[2];
-	/* a zip code is not an integer. You can't perform mathematical operations 
-	 * on them therefore they cannot be an integer */
 	char zip[5];
 } new_contact;
 
@@ -34,13 +32,27 @@ void get_contact()
 	cout << "City: ";
 	cin  >> new_contact.city;
 	cout <<  "State (2 char code): ";
-	cin  >> setw(2) >> new_contact.state;
+	cin  >> setw(3) >> new_contact.state;
 	cout <<  "ZIP code: ";
-	cin  >> setw(5) >> new_contact.zip;
+	cin  >> setw(6) >> new_contact.zip;
 
 	new_contact.record = contact.size();
 
 	contact.push_back(new_contact);
+}
+
+void print_csv_rolodex()
+{
+	for (int i; i < contact.size(); i++) {
+		cout
+			<< contact.at(i).fname << ","
+			<< contact.at(i).lname << ","
+			<< contact.at(i).addr1 << ","
+			<< contact.at(i).addr2 << ","
+			<< contact.at(i).city << ","
+			<< contact.at(i).state << ","
+			<< contact.at(i).zip << "\n";
+	}
 }
 
 int main()
@@ -56,4 +68,5 @@ int main()
 			opt = "";
 		}
 	}
+	print_csv_rolodex();
 }
