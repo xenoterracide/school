@@ -1,0 +1,15 @@
+# 11.1
+1.) t
+2.) t
+3.) t
+4.) f
+5.)
+
+struct Cars
+{
+	string type;
+	int seating;
+	double price;
+	double mpg;
+	string color;
+} familyCar;
