@@ -43,7 +43,7 @@ void get_contact()
 
 void print_csv_rolodex()
 {
-	for (unsigned int i = 0; i < contact.size(); i++) {
+	for (size_t i = 0; i < contact.size(); i++) {
 		cout
 			<< contact.at(i).fname << ","
 			<< contact.at(i).lname << ","
