@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -15,13 +16,26 @@ struct contact_rec
 	string addr2;
 	string city;
 	string state;
-	string zip;
+	char zip[5];
 } new_contact;
 
 vector<contact_rec> contact;
 
+bool str_isnum(string str)
+{
+	for ( int i = 0; i < str.size(); i++) {
+		if ( isdigit(str.at(i)) != 0 ) {
+			return false;
+		}
+	}
+	return true;
+}
+
 void get_contact()
 {
+	bool valid = false;
+	string tmp;
+
 	new_contact.record = contact.size();
 
 	cout << "First Name: ";
@@ -36,9 +50,16 @@ void get_contact()
 	getline ( cin, new_contact.city, '\n');
 	cout <<  "State (2 char code): ";
 	getline ( cin, new_contact.state, '\n');
-	cout <<  "ZIP code: ";
-	getline ( cin, new_contact.zip, '\n');
-
+	while ( valid != true ) {
+		cout <<  "ZIP code: ";
+		getline ( cin, tmp, '\n');
+		if ( tmp.size() == 5 && str_isnum(tmp) == true ) {
+			valid = true;
+		} else {
+			cout << "Invalid zip code";
+		}
+	}
+		
 	contact.push_back(new_contact);
 }
 
