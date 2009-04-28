@@ -1,6 +1,7 @@
 // #define DEBUG
 
 #include <ctype.h>
+
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -18,7 +19,7 @@ struct contact_rec
 	string addr2;
 	string city;
 	string state;
-	char zip[5];
+	string zip;
 } new_contact;
 
 vector<contact_rec> contact;
@@ -77,6 +78,7 @@ void get_contact()
 #endif
 		}
 	}
+	new_contact.zip = tmp;
 		
 	contact.push_back(new_contact);
 }
