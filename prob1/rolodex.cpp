@@ -1,3 +1,6 @@
+/* Copyright Caleb Cushing 2009 all rights reserved */
+/* License: GPLv3 */
+
 // #define DEBUG
 
 #include <ctype.h>
@@ -117,4 +120,5 @@ int main()
 		}
 	}
 	print_csv_rolodex();
+	return 0;
 }
