@@ -46,7 +46,7 @@ void print_csv_rolodex()
 {
 	ofstream csv;
 
-	csv.open("roldex.csv")
+	csv.open("roldex.csv");
 
 	for (size_t i = 0; i < contact.size(); i++) {
 		csv
