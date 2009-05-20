@@ -35,26 +35,26 @@ struct sales_record {
 } new_sale;
 
 struct customer_record {
-	unsigned int cust_id;
+	unsigned int customer_id;
 	string fname;
 	string lname;
-} new_cust;
+} new_customer;
 
 // record vectors ( basically tables )
 vector<sales_record> sales;
 vector<customer_record> customers;
 
 //functions
-int add_cust()
+int add_customer()
 {
-	new_cust.cust_id = customers.size();
+	new_customer.customer_id = customers.size();
 
 	cout << "First Name: ";
-	getline (cin, new_cust.fname, '\n');
+	getline (cin, new_customer.fname, '\n');
 	cout << "Last Name: ";
-	getline (cin, new_cust.lname, '\n');
+	getline (cin, new_customer.lname, '\n');
 
-	customers.push_back(new_cust);
+	customers.push_back(new_customer);
 	return 0;
 }
 
@@ -88,7 +88,7 @@ int main()
 	// parse menu
 	while (opt != "q") {
 		if (opt == "c") {
-			add_cust();
+			add_customer();
 			opt = "\0";
 		} else if (opt == "s") {
 			add_sale();
