@@ -1,3 +1,6 @@
+/* Copyright Caleb Cushing 2009. All rights reserved.
+ * License: GPLv3
+ */
 #include <algorithm>
 #include <iostream>
 #include <vector>
