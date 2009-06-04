@@ -1,0 +1,55 @@
+Quiz #2
+
+C++ Programming
+
+60 Points 
+ 
+ 
+
+Design and write a C++ program that asks the user for a set of numbers and 
+perform a list of calculations (see below).  The set of numbers should consist 
+of at least 10 or more numbers (note:  the below example only shows 5 numbers.  
+You need the ability to enter and calculate 10 numbers).  You have the freedom 
+to write this program however you think would work best. 
+
+Perform the following calculations writing out the calculations performed and 
+the correct answer. 
+
+Display the list of numbers before the list of calculations are shown.
+
+Be sure to document all sections of the program……. 5 Points 
+ 
+
+Add all numbers in the set together.  5 Points.
+
+Multiply all numbers in the set together. 5 Points.
+
+Find the average of the numbers in the set. 5 Points.
+
+Find the largest number entered.  10 Points.
+
+Find the smallest number entered.  10 Points. 
+ 
+
+Part of your Output may look similar to: 
+ 
+
+.
+
+.
+
+.
+
+.
+
+List of numbers that were entered:  10   100   50    10   30  20 Points
+
+Adding all the numbers together yield:  200
+
+Multiplying all the numbers entered yield:  15000000
+
+The average of the numbers entered yield: 40
+
+The largest number entered:  100
+
+The smallest number entered:  10 
