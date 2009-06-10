@@ -22,8 +22,8 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
+#include <ctime>
 #include <stdio.h>
-#include <time.h>
 
 using namespace std;
 
@@ -147,14 +147,10 @@ void getSerInfo()
 	double grandSubTotal, salesTax, totalDue;
 
 	//print the date and time
-	char dateStr[9];
-	char timeStr[9];
-	_strdate( dateStr);
-	printf("The current date is %s \n", dateStr);
-	_strtime( timeStr);
-	printf("The current time is %s \n", timeStr);
-	cout << endl;
-	cout << endl;
+	time_t timeStr;
+
+	timeStr = time(NULL);
+	cout << "The current date is: " << ctime(&timeStr) << endl;
 
 	ofstream serOutFile;
 
@@ -212,7 +208,7 @@ void getSerInfo()
 	while (counter < index);
 
 	//time stamp for the file
-	serOutFile << "Date: " << dateStr << " : ";
+	serOutFile << "Date: " << timeStr << " : ";
 	serOutFile << "Time: " << timeStr << " : ";
 
 	//determine which services to print to the file
