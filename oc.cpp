@@ -56,6 +56,7 @@ void getCusInfo();
 void getSerInfo();
 void searchSerCompleted();
 void searchCurrentCus();
+void writeData();
 
 int main()
 {
@@ -143,8 +144,9 @@ void getCusInfo()
 
 		cout << "Is this correct?  (1=yes, 2=no)";
 		cin >> confirm;
-		if (confirm != 1) {
+		if (confirm == 1) {
 			customers.push_back(new_customer);
+			writeData();
 		}
 		cout << endl << endl;
 	}
@@ -324,4 +326,21 @@ void searchCurrentCus()
 	}
 //close the customer files
 	cusInFile.close();
+}
+void writeData()
+{
+	ofstream csv;
+	csv.open("cust.csv");
+
+	for (unsigned int i = 0; i < customers.size(); i++) {
+		csv
+			<< customers.at(i).record << ","
+			<< customers.at(i).fname << ","
+			<< customers.at(i).lname << ","
+			<< customers.at(i).home << ","
+			<< customers.at(i).work << ","
+			<< customers.at(i).cell << ","
+			<< customers.at(i).license_plate << endl;
+	}
+	csv.close();
 }
