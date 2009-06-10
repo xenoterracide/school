@@ -51,6 +51,7 @@ struct customer_record
 
 vector<customer_record> customers;
 
+void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
 void searchSerCompleted();
@@ -96,6 +97,17 @@ int main()
 }
 
 /*
+ * storing garbage from cin here.
+ * cin.clear() and cin.ignore() don't seem to clear cin adequately
+ */
+void garbageDataHandler()
+{
+	string garbage;
+	getline( cin, garbage);
+	garbage = "\0";
+}
+
+/*
 pull the system date
 use a counter for each service
 get a grand total for each service used
@@ -106,30 +118,34 @@ void getCusInfo()
 	int confirm=0;
 	while (confirm != 1)
 	{
-		cin.clear();
+		garbageDataHandler();
+
 		new_customer.record = customers.size();
 
 		cout << "First Name: ";
-		getline( cin, new_customer.fname, '\n');
+		getline( cin, new_customer.fname);
 
 		cout << "Last Name: ";
-		getline( cin, new_customer.lname, '\n');
+		getline( cin, new_customer.lname);
 
 		cout << "Home Phone: ";
-		getline( cin, new_customer.home, '\n');
+		getline( cin, new_customer.home);
 
 		cout << "Cell Phone: ";
-		getline( cin, new_customer.cell, '\n');
+		getline( cin, new_customer.cell);
 
 		cout << "Work Phone: ";
-		getline( cin, new_customer.work, '\n');
+		getline( cin, new_customer.work);
 
 		cout << "Plate Number: ";
-		getline( cin, new_customer.license_plate, '\n');
+		getline( cin, new_customer.license_plate);
 		cout << endl << endl;
 
 		cout << "Is this correct?  (1=yes, 2=no)";
 		cin >> confirm;
+		if (confirm != 1) {
+			customers.push_back(new_customer);
+		}
 		cout << endl << endl;
 	}
 }
