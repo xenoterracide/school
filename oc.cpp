@@ -27,6 +27,7 @@
 #include <fstream>
 #include <ctime>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -54,6 +55,7 @@ vector<customer_record> customers;
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
+void readData();
 void searchSerCompleted();
 void searchCurrentCus();
 void writeData();
@@ -63,6 +65,7 @@ int main()
 	//Declare Variables
 	int userChoice;
 		
+	readData();
 	//The main menu
 	do {
 		cout
@@ -329,6 +332,34 @@ void searchCurrentCus()
 	}
 //close the customer files
 	cusInFile.close();
+}
+void readData()
+{
+	string line = "\0";
+	string field = "\0";
+	string token;
+	stringstream iss;
+	vector<string> tmp;
+
+	ifstream csv;
+	csv.open("cust.csv");
+
+	if (!csv) {
+		cerr << "unable to open cust.csv";
+		exit(1);
+	}
+	// extract comma delimited fields from file
+	while (!csv.eof()) {
+		getline(csv, line);
+		iss << line;
+		while ( getline(iss, token, ',') ) {
+			tmp.push_back(token);
+		}
+		iss.clear();
+	}
+	csv.close();
+
+	cout << endl;
 }
 void writeData()
 {
