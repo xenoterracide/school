@@ -41,8 +41,8 @@ const double SALES_TAX = .06;
 struct customer_record
 {
 	unsigned int record;
-  	string fname;
-  	string lname;
+	string fname;
+	string lname;
 	string home;
 	string work;
 	string cell;
