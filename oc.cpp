@@ -45,17 +45,18 @@ int main()
 	int userChoice;
 		
 	//The main menu
-	cout << "**********************************" << endl;
-	cout << "*    Quick Oil Change Station    *" << endl;
-	cout << "************MAIN MENU*************" << endl;
-	cout << "*                                *" << endl;
-	cout << "* 1 - Add a New Customer         *" << endl;
-	cout << "* 2 - Complete a Service         *" << endl;
-	cout << "* 3 - Search Services            *" << endl;
-	cout << "* 4 - Search For a Customer      *" << endl;
-	cout << "*                                *" << endl;
-	cout << "**********************************" << endl;
-	cout << "Please choose the service used: ";
+	cout
+		<< "**********************************" << endl
+		<< "*    Quick Oil Change Station    *" << endl
+		<< "************MAIN MENU*************" << endl
+		<< "*                                *" << endl
+		<< "* 1 - Add a New Customer         *" << endl
+		<< "* 2 - Complete a Service         *" << endl
+		<< "* 3 - Search Services            *" << endl
+		<< "* 4 - Search For a Customer      *" << endl
+		<< "*                                *" << endl
+		<< "**********************************" << endl
+		<< "Please choose the service used: ";
 	cin >> userChoice;
 	cout << endl;
 
@@ -117,13 +118,13 @@ void getCusInfo()
 	cout << endl << endl;
 
 	//output displayed to user
-	cout << "Name:		" << fname << " " << lname << endl;
-	cout << "Home Phone:	"  << home << endl;
-	cout << "Cell Phone:	" << cell <<endl;
-	cout << "Work Phone:	" << work << endl;
-	cout << "Plate Number:	" << plateNum << endl;
-	cout << endl;
-	cout << "Is this correct?  (1=yes, 2=no)";
+	cout << "Name:		" << fname << " " << lname << endl
+		<< "Home Phone:	"  << home << endl
+		<< "Cell Phone:	" << cell <<endl
+		<< "Work Phone:	" << work << endl
+		<< "Plate Number:	" << plateNum << endl
+		<< endl
+		<< "Is this correct?  (1=yes, 2=no)";
 	cin >> confirm;
 	cout << endl << endl;
 	//write the data to the file
@@ -164,18 +165,19 @@ void getSerInfo()
 	cout << endl;
 
 	//display the services menu to the user
-	cout << "*****Quick Oil Change Station*****" << endl;
-	cout << "*                                *" << endl;
-	cout << "************MAIN MENU*************" << endl;
-	cout << "*                                *" << endl;
-	cout << "* 1 - Basic Oil Change           *" << endl;
-	cout << "* 2 - Full Service Oil Change    *" << endl;
-	cout << "* 3 - Transmission Fluid Service *" << endl;
-	cout << "* 4 - Radiator Fluid Exchange    *" << endl;
-	cout << "* 5 - Differential Service       *" << endl;
-	cout << "*                                *" << endl;
-	cout << "**********************************" << endl;
-	cout << "Please choose the service used: ";
+	cout
+		<< "*****Quick Oil Change Station*****" << endl
+		<< "*                                *" << endl
+		<< "************MAIN MENU*************" << endl
+		<< "*                                *" << endl
+		<< "* 1 - Basic Oil Change           *" << endl
+		<< "* 2 - Full Service Oil Change    *" << endl
+		<< "* 3 - Transmission Fluid Service *" << endl
+		<< "* 4 - Radiator Fluid Exchange    *" << endl
+		<< "* 5 - Differential Service       *" << endl
+		<< "*                                *" << endl
+		<< "**********************************" << endl
+		<< "Please choose the service used: ";
 
 	//collect the prices for the services used
 	do 
@@ -228,9 +230,10 @@ void getSerInfo()
 	totalDue = grandSubTotal + salesTax;
 
 	//Display the output to the user
-	cout << "The subtotal is............$" << grandSubTotal << endl;
-	cout << "The sales tax is...........$" << salesTax << endl;
-	cout << "The total due is...........$" << totalDue << endl;
+	cout
+		<< "The subtotal is............$" << grandSubTotal << endl
+		<< "The sales tax is...........$" << salesTax << endl
+		<< "The total due is...........$" << totalDue << endl;
 
 	serOutFile.close();
 }
@@ -241,17 +244,18 @@ void searchSerCompleted()
 	ifstream serInFile;
 //open the file to read customer services from
 	serInFile.open("services.txt");
-	cout << "******SEARCH SERVICES COMPLETED*****" << endl;
-	cout << "*                                  *" << endl;
-	cout << "*  1 - Basic Oil Change            *" << endl;
-	cout << "*  2 - Full Service Oil Change     *" << endl;
-	cout << "*  3 - Transmission Fluid Service  *" << endl;
-	cout << "*  4 - Radiator Fluid Exchange     *" << endl;
-	cout << "*  5 - Differential Service        *" << endl;
-	cout << "*  6 - Search By Date              *" << endl;
-	cout << "*                                  *" << endl;
-	cout << "************************************" << endl;
-	cout << "Please choose how to conduct your search: ";
+	cout
+		<< "******SEARCH SERVICES COMPLETED*****" << endl
+		<< "*                                  *" << endl
+		<< "*  1 - Basic Oil Change            *" << endl
+		<< "*  2 - Full Service Oil Change     *" << endl
+		<< "*  3 - Transmission Fluid Service  *" << endl
+		<< "*  4 - Radiator Fluid Exchange     *" << endl
+		<< "*  5 - Differential Service        *" << endl
+		<< "*  6 - Search By Date              *" << endl
+		<< "*                                  *" << endl
+		<< "************************************" << endl
+		<< "Please choose how to conduct your search: ";
 	cin >> searchSerPref;
 
 	switch (searchSerPref)
@@ -281,16 +285,17 @@ void searchCurrentCus()
 	ifstream cusInFile;
 //open the file to read customer information from
 	cusInFile.open("customer.txt");
-	cout << "**********CUSTOMER SEARCH***********" << endl;
-	cout << "*                                  *" << endl;
-	cout << "*  1 - First Name                  *" << endl;
-	cout << "*  2 - Last Name                   *" << endl;
-	cout << "*  3 - Plate Number                *" << endl;
-	cout << "*  4 - Phone Number                *" << endl;
-	cout << "*  5 - Date                        *" << endl;
-	cout << "*                                  *" << endl;
-	cout << "************************************" << endl;
-	cout << "How would you like to search for the customer?  ";
+	cout
+		<< "**********CUSTOMER SEARCH***********" << endl
+		<< "*                                  *" << endl
+		<< "*  1 - First Name                  *" << endl
+		<< "*  2 - Last Name                   *" << endl
+		<< "*  3 - Plate Number                *" << endl
+		<< "*  4 - Phone Number                *" << endl
+		<< "*  5 - Date                        *" << endl
+		<< "*                                  *" << endl
+		<< "************************************" << endl
+		<< "How would you like to search for the customer?  ";
 	cin >> searchSerPref;
 	cout << endl << endl;
 	switch (searchSerPref)
