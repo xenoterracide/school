@@ -1,5 +1,8 @@
 /*
-	Copyright 2009 by Caleb Cushing <xenoterracide@gmail.com>
+	Copyright 2009 by
+		Caleb Cushing <xenoterracide@gmail.com>
+		Amanda Cobb
+		Kris Richardson
    	All Rights Reserved
 
 	This file is part of oc
@@ -209,8 +212,7 @@ void getSerInfo()
 	while (counter < index);
 
 	//time stamp for the file
-	serOutFile << "Date: " << timeStr << " : ";
-	serOutFile << "Time: " << timeStr << " : ";
+	serOutFile << "Date: " << ctime(&timeStr) << " : ";
 
 	//determine which services to print to the file
 	if (subTotal1 > 0.0)
