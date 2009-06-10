@@ -65,23 +65,17 @@ int main()
 
 	switch (userChoice)
 	{
-
 	case 1:
-	//get the input from the user
-	getCusInfo();
+		getCusInfo();
 		break;
-	
 	case 2:
-	//get services to be completed
-	getSerInfo();
+		getSerInfo();
 		break;
-
 	case 3:
-	searchSerCompleted();
+		searchSerCompleted();
 		break;
-
 	case 4:
-	searchCurrentCus();
+		searchCurrentCus();
 		break;
 	}
 	return 0;
