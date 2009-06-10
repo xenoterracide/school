@@ -23,7 +23,6 @@
 #include <iomanip>
 #include <fstream>
 #include <ctime>
-#include <stdio.h>
 
 using namespace std;
 
