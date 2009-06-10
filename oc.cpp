@@ -64,36 +64,39 @@ int main()
 	int userChoice;
 		
 	//The main menu
-	cout
-		<< "**********************************" << endl
-		<< "*    Quick Oil Change Station    *" << endl
-		<< "************MAIN MENU*************" << endl
-		<< "*                                *" << endl
-		<< "* 1 - Add a New Customer         *" << endl
-		<< "* 2 - Complete a Service         *" << endl
-		<< "* 3 - Search Services            *" << endl
-		<< "* 4 - Search For a Customer      *" << endl
-		<< "*                                *" << endl
-		<< "**********************************" << endl
-		<< "Please choose the service used: ";
-	cin >> userChoice;
-	cout << endl;
+	do {
+		cout
+			<< "**********************************" << endl
+			<< "*    Quick Oil Change Station    *" << endl
+			<< "************MAIN MENU*************" << endl
+			<< "*                                *" << endl
+			<< "* 1 - Add a New Customer         *" << endl
+			<< "* 2 - Complete a Service         *" << endl
+			<< "* 3 - Search Services            *" << endl
+			<< "* 4 - Search For a Customer      *" << endl
+			<< "* 9 - Quit                       *" << endl
+			<< "*                                *" << endl
+			<< "**********************************" << endl
+			<< "Please choose the service used: ";
+		cin >> userChoice;
+		cout << endl;
 
-	switch (userChoice)
-	{
-	case 1:
-		getCusInfo();
-		break;
-	case 2:
-		getSerInfo();
-		break;
-	case 3:
-		searchSerCompleted();
-		break;
-	case 4:
-		searchCurrentCus();
-		break;
-	}
+		switch (userChoice)
+		{
+		case 1:
+			getCusInfo();
+			break;
+		case 2:
+			getSerInfo();
+			break;
+		case 3:
+			searchSerCompleted();
+			break;
+		case 4:
+			searchCurrentCus();
+			break;
+		}
+	} while (userChoice != 9);
 	return 0;
 }
 
