@@ -26,6 +26,7 @@
 #include <iomanip>
 #include <fstream>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -36,6 +37,19 @@ const double TRANS_FLUID = 109.99;
 const double RADIATOR_FLUID = 69.99;
 const double DIFFERENTIAL = 79.99;
 const double SALES_TAX = .06;
+
+struct customer_record
+{
+	unsigned int record;
+  	string fname;
+  	string lname;
+	string home;
+	string work;
+	string cell;
+	string license_plate;
+} new_customer;
+
+vector<customer_record> customers;
 
 void getCusInfo();
 void getSerInfo();
@@ -89,53 +103,35 @@ query sales and services by date ranges
 */
 void getCusInfo()
 {
-	ofstream cusOutFile;
-	//open the file to write customer information to
-	cusOutFile.open("customer.txt", ios::app);
-
-	cusOutFile << fixed << showpoint;
-	cusOutFile << setprecision(2);
-
-	string fname, lname, home, cell, work, plateNum;
 	int confirm=0;
 	while (confirm != 1)
 	{
-	cout << "First Name: ";
-	cin >> fname;
-	cout << "Last Name: ";
-	cin >> lname;
-	cout << "Home Phone: ";
-	cin >> home;
-	cout << "Cell Phone: ";
-	cin >> cell;
-	cout << "Work Phone: ";
-	cin >> work;
-	cout << "Plate Number: ";
-	cin >> plateNum;
-	cout << endl << endl;
+		cin.clear();
+		new_customer.record = customers.size();
 
-	//output displayed to user
-	cout << "Name:		" << fname << " " << lname << endl
-		<< "Home Phone:	"  << home << endl
-		<< "Cell Phone:	" << cell <<endl
-		<< "Work Phone:	" << work << endl
-		<< "Plate Number:	" << plateNum << endl
-		<< endl
-		<< "Is this correct?  (1=yes, 2=no)";
-	cin >> confirm;
-	cout << endl << endl;
-	//write the data to the file
-	if (confirm == 1)
-	{
-	cusOutFile << "Name:		" << fname << " " << lname << endl;
-	cusOutFile << "Home Phone:	"  << home << endl;
-	cusOutFile << "Cell Phone:	" << cell << endl;
-	cusOutFile << "Work Phone:	" << work << endl;
-	cusOutFile << "Plate Number:	" << plateNum << endl;
-	cusOutFile << "--------------------------------" << endl;
+		cout << "First Name: ";
+		getline( cin, new_customer.fname, '\n');
+
+		cout << "Last Name: ";
+		getline( cin, new_customer.lname, '\n');
+
+		cout << "Home Phone: ";
+		getline( cin, new_customer.home, '\n');
+
+		cout << "Cell Phone: ";
+		getline( cin, new_customer.cell, '\n');
+
+		cout << "Work Phone: ";
+		getline( cin, new_customer.work, '\n');
+
+		cout << "Plate Number: ";
+		getline( cin, new_customer.license_plate, '\n');
+		cout << endl << endl;
+
+		cout << "Is this correct?  (1=yes, 2=no)";
+		cin >> confirm;
+		cout << endl << endl;
 	}
-	}
-	cusOutFile.close();
 }
 void getSerInfo()
 {
