@@ -113,13 +113,14 @@ void debugCustVecStruct()
 {
 	for (unsigned int i = 0; i < customers.size(); i++) {
 		cout
-			<< "record: " << customers.at(i).record << endl
-			<< "fname:  " << customers.at(i).fname  << endl
-			<< "lname:  " << customers.at(i).lname  << endl
-			<< "home:   " << customers.at(i).home   << endl
-			<< "cell:   " << customers.at(i).cell   << endl
-			<< "work:   " << customers.at(i).work   << endl
-			<< "plate:  " << customers.at(i).license_plate << endl;
+			<< "record: " << customers.at(i).record << "\n"
+			<< "fname:  " << customers.at(i).fname  << "\n"
+			<< "lname:  " << customers.at(i).lname  << "\n"
+			<< "home:   " << customers.at(i).home   << "\n"
+			<< "cell:   " << customers.at(i).cell   << "\n"
+			<< "work:   " << customers.at(i).work   << "\n"
+			<< "plate:  " << customers.at(i).license_plate << "\n"
+			<< endl;
 	}
 }
 /*
