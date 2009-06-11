@@ -376,23 +376,36 @@ void searchCustRecord()
 
 	printCustRecord(searchParam);
 	
-	cout
-		<< "************************************\n"
-		<< "*                                  *\n"
-		<< "*  1 - Update                      *\n"
-		<< "*  2 - Delete                      *\n"
-		<< "*  2 - Delete                      *\n"
-		<< "*  8 - Search Again                *\n"
-		<< "*  9 - Main Menu                   *\n"
-		<< "*                                  *\n"
-		<< "************************************\n"
-		<< "> ";
-	cin >> opt;
-	switch(opt) {
-	case 1:
-	case 2:
-	case 9:
-		break;
+	while(1) {
+		cout
+			<< "************************************\n"
+			<< "*                                  *\n"
+			<< "*  1 - Update                      *\n"
+			<< "*  2 - Delete                      *\n"
+			<< "*  6 - Repeat                      *\n"
+			<< "*  7 - Back                        *\n"
+			<< "*  8 - Main Menu                   *\n"
+			<< "*  9 - Quit                        *\n"
+			<< "*                                  *\n"
+			<< "************************************\n"
+			<< "> ";
+		cin >> opt;
+		switch(opt) {
+		case 1:
+		case 2:
+		case 6:
+			searchCustRecord();
+			break;
+		case 7:
+			searchCustMenu();
+			break;
+		case 8:
+			mainMenu();
+			break;
+		case 9:
+			exit(0);
+			break;
+		}
 	}
 }
 void readCustData()
