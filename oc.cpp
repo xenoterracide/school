@@ -54,7 +54,7 @@ vector<customer_record> customers;
 
 void debugCustVecStruct();
 void garbageDataHandler();
-void getCusInfo();
+void getCustInfo();
 void getSerInfo();
 void mainMenu();
 void printCustRecord(const unsigned int& i);
@@ -97,7 +97,7 @@ use a counter for each service
 get a grand total for each service used
 query sales and services by date ranges
 */
-void getCusInfo()
+void getCustInfo()
 {
 	int confirm=0;
 	while (confirm != 1)
@@ -255,7 +255,7 @@ void mainMenu()
 		switch (opt)
 		{
 		case 1:
-			getCusInfo();
+			getCustInfo();
 			break;
 		case 2:
 			getSerInfo();
