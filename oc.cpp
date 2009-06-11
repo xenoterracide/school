@@ -360,9 +360,11 @@ void searchCustMenu()
 void searchCustRecord()
 {
 	int searchParam;
-	cout << "Record Number: " << endl;
+	cout << "Record Number: ";
 	cin >> searchParam;
+	cout << endl;
 
+	printCustRecord(searchParam);
 }
 void readCustData()
 {
