@@ -52,7 +52,7 @@ struct customer_record
 
 vector<customer_record> customers;
 
-void debugCustVecStruct();
+void listCust();
 void garbageDataHandler();
 void getCustInfo();
 void getSerInfo();
@@ -74,7 +74,7 @@ int main()
 }
 
 // basically were' just printing the array to stdout
-void debugCustVecStruct()
+void listCust()
 {
 	for (unsigned int i = 0; i < customers.size(); i++) {
 		printCustRecord(i);
@@ -244,7 +244,7 @@ void mainMenu()
 			<< "* 2 - Complete a Service         *\n"
 			<< "* 3 - Search Services            *\n"
 			<< "* 4 - Search For a Customer      *\n"
-			<< "* 8 - Debug                      *\n"
+			<< "* 5 - List Customers             *\n"
 			<< "* 9 - Quit                       *\n"
 			<< "*                                *\n"
 			<< "**********************************\n"
@@ -266,9 +266,13 @@ void mainMenu()
 		case 4:
 			searchCustMenu();
 			break;
-		case 8:
-			debugCustVecStruct();
+		case 5:
+			listCust();
 			break;
+		case 6:
+		case 7:
+		case 8:
+			continue;
 		case 9:
 			exit(0);
 			break;
