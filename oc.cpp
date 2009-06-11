@@ -375,8 +375,10 @@ void searchCustMenu()
 }
 void searchCustRecord()
 {
+	bool found = false;
 	int opt;
 	int searchParam;
+	int record;
 
 	cout << "Record Number: ";
 	cin >> searchParam;
@@ -384,8 +386,14 @@ void searchCustRecord()
 
 	for (unsigned int i = 0; i < customers.size(); ++i) {
 		if ( customers.at(i).record == searchParam ) {
-			printCustRecord(i);
+			record = i;
+			found = true;
 		}
+	}
+	if (found == true) {
+		printCustRecord(record);
+	} else {
+		cout << "Customer Record Not Found\n" << endl;
 	}
 	
 	while(1) {
