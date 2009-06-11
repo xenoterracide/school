@@ -56,6 +56,7 @@ void debugCustVecStruct();
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
+void mainMenu();
 void printCustRecord(const unsigned int& i);
 void readCustData();
 void searchSerCompleted();
@@ -66,47 +67,9 @@ void writeCustData();
 int main()
 {
 	//Declare Variables
-	int userChoice;
-		
 	readCustData();
+	mainMenu();
 	//The main menu
-	do {
-		cout
-			<< "**********************************\n"
-			<< "*    Quick Oil Change Station    *\n"
-			<< "************MAIN MENU*************\n"
-			<< "*                                *\n"
-			<< "* 1 - Add a New Customer         *\n"
-			<< "* 2 - Complete a Service         *\n"
-			<< "* 3 - Search Services            *\n"
-			<< "* 4 - Search For a Customer      *\n"
-			<< "* 8 - Debug                      *\n"
-			<< "* 9 - Quit                       *\n"
-			<< "*                                *\n"
-			<< "**********************************\n"
-			<< "Please choose the service used: ";
-		cin >> userChoice;
-		cout << endl;
-
-		switch (userChoice)
-		{
-		case 1:
-			getCusInfo();
-			break;
-		case 2:
-			getSerInfo();
-			break;
-		case 3:
-			searchSerCompleted();
-			break;
-		case 4:
-			searchCustMenu();
-			break;
-		case 8:
-			debugCustVecStruct();
-			break;
-		}
-	} while (userChoice != 9);
 	return 0;
 }
 
@@ -266,6 +229,48 @@ void getSerInfo()
 		<< "The total due is...........$" << totalDue << endl;
 
 	serOutFile.close();
+}
+
+void mainMenu()
+{
+	int opt;
+	do {
+		cout
+			<< "**********************************\n"
+			<< "*    Quick Oil Change Station    *\n"
+			<< "************MAIN MENU*************\n"
+			<< "*                                *\n"
+			<< "* 1 - Add a New Customer         *\n"
+			<< "* 2 - Complete a Service         *\n"
+			<< "* 3 - Search Services            *\n"
+			<< "* 4 - Search For a Customer      *\n"
+			<< "* 8 - Debug                      *\n"
+			<< "* 9 - Quit                       *\n"
+			<< "*                                *\n"
+			<< "**********************************\n"
+			<< "> ";
+		cin >> opt;
+		cout << endl;
+
+		switch (opt)
+		{
+		case 1:
+			getCusInfo();
+			break;
+		case 2:
+			getSerInfo();
+			break;
+		case 3:
+			searchSerCompleted();
+			break;
+		case 4:
+			searchCustMenu();
+			break;
+		case 8:
+			debugCustVecStruct();
+			break;
+		}
+	} while (opt != 9);
 }
 void printCustRecord(const unsigned int& i)
 {
