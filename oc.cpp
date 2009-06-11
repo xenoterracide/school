@@ -53,6 +53,7 @@ struct customer_record
 vector<customer_record> customers;
 
 void listCust();
+void delCustInfo(int& record);
 void garbageDataHandler();
 void getCustInfo(int& record);
 void getSerInfo();
@@ -73,6 +74,11 @@ int main()
 	return 0;
 }
 
+void delCustInfo(int& record)
+{
+	customers.erase(customers.begin() + record );
+	writeCustData();
+}
 // basically were' just printing the array to stdout
 void listCust()
 {
@@ -412,7 +418,11 @@ void searchCustRecord()
 		cin >> opt;
 		switch(opt) {
 		case 1:
+			getCustInfo(record);
+			break;
 		case 2:
+			delCustInfo(record);
+			break;
 		case 6:
 			searchCustRecord();
 			break;
