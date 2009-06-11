@@ -234,7 +234,7 @@ void getSerInfo()
 void mainMenu()
 {
 	int opt;
-	do {
+	while (1) {
 		cout
 			<< "**********************************\n"
 			<< "*    Quick Oil Change Station    *\n"
@@ -269,8 +269,11 @@ void mainMenu()
 		case 8:
 			debugCustVecStruct();
 			break;
+		case 9:
+			exit(0);
+			break;
 		}
-	} while (opt != 9);
+	}
 }
 void printCustRecord(const unsigned int& i)
 {
