@@ -41,7 +41,7 @@ const double SALES_TAX = .06;
 
 struct customer_record
 {
-	unsigned int record;
+	int record;
 	string fname;
 	string lname;
 	string home;
@@ -54,7 +54,7 @@ vector<customer_record> customers;
 
 void listCust();
 void garbageDataHandler();
-void getCustInfo();
+void getCustInfo(int& record);
 void getSerInfo();
 void mainMenu();
 void printCustRecord(const unsigned int& i);
@@ -97,42 +97,36 @@ use a counter for each service
 get a grand total for each service used
 query sales and services by date ranges
 */
-void getCustInfo()
+void getCustInfo(int& record)
 {
-	int confirm=0;
-	while (confirm != 1)
-	{
-		garbageDataHandler();
-
+	// create new customer
+	if (record == -1 ) {
 		new_customer.record = customers.size();
-
-		cout << "First Name: ";
-		getline( cin, new_customer.fname);
-
-		cout << "Last Name: ";
-		getline( cin, new_customer.lname);
-
-		cout << "Home Phone: ";
-		getline( cin, new_customer.home);
-
-		cout << "Cell Phone: ";
-		getline( cin, new_customer.cell);
-
-		cout << "Work Phone: ";
-		getline( cin, new_customer.work);
-
-		cout << "Plate Number: ";
-		getline( cin, new_customer.license_plate);
-		cout << endl << endl;
-
-		cout << "Is this correct?  (1=yes, 2=no)";
-		cin >> confirm;
-		if (confirm == 1) {
-			customers.push_back(new_customer);
-			writeCustData();
-		}
-		cout << endl << endl;
+		customers.push_back(new_customer);
+		record = new_customer.record;
 	}
+	garbageDataHandler();
+
+	cout << "First Name: ";
+	getline( cin, customers.at(record).fname);
+
+	cout << "Last Name: ";
+	getline( cin, customers.at(record).lname);
+
+	cout << "Home Phone: ";
+	getline( cin, customers.at(record).home);
+
+	cout << "Cell Phone: ";
+	getline( cin, customers.at(record).cell);
+
+	cout << "Work Phone: ";
+	getline( cin, customers.at(record).work);
+
+	cout << "Plate Number: ";
+	getline( cin, customers.at(record).license_plate);
+
+	writeCustData();
+	cout << endl << endl;
 }
 void getSerInfo()
 {
@@ -234,6 +228,7 @@ void getSerInfo()
 void mainMenu()
 {
 	int opt;
+	int newCust = -1;
 	while (1) {
 		cout
 			<< "**********************************\n"
@@ -255,7 +250,7 @@ void mainMenu()
 		switch (opt)
 		{
 		case 1:
-			getCustInfo();
+			getCustInfo(newCust);
 			break;
 		case 2:
 			getSerInfo();
@@ -387,7 +382,11 @@ void searchCustRecord()
 	cin >> searchParam;
 	cout << endl;
 
-	printCustRecord(searchParam);
+	for (unsigned int i = 0; i < customers.size(); ++i) {
+		if ( customers.at(i).record == searchParam ) {
+			printCustRecord(i);
+		}
+	}
 	
 	while(1) {
 		cout
