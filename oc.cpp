@@ -52,6 +52,7 @@ struct customer_record
 
 vector<customer_record> customers;
 
+void debugVecStruct();
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
@@ -77,6 +78,7 @@ int main()
 			<< "* 2 - Complete a Service         *" << endl
 			<< "* 3 - Search Services            *" << endl
 			<< "* 4 - Search For a Customer      *" << endl
+			<< "* 8 - Debug                      *" << endl
 			<< "* 9 - Quit                       *" << endl
 			<< "*                                *" << endl
 			<< "**********************************" << endl
@@ -98,11 +100,27 @@ int main()
 		case 4:
 			searchCurrentCus();
 			break;
+		case 8:
+			debugVecStruct();
+			break;
 		}
 	} while (userChoice != 9);
 	return 0;
 }
 
+void debugVecStruct()
+{
+	for (unsigned int i = 0; i < customers.size(); i++) {
+		cout
+			<< "record: " << customers.at(i).record << endl
+			<< "fname:  " << customers.at(i).fname  << endl
+			<< "lname:  " << customers.at(i).lname  << endl
+			<< "home:   " << customers.at(i).home   << endl
+			<< "cell:   " << customers.at(i).cell   << endl
+			<< "work:   " << customers.at(i).work   << endl
+			<< "plate:  " << customers.at(i).license_plate << endl;
+	}
+}
 /*
  * storing garbage from cin here.
  * cin.clear() and cin.ignore() don't seem to clear cin adequately
