@@ -359,12 +359,33 @@ void searchCustMenu()
 }
 void searchCustRecord()
 {
+	int opt;
 	int searchParam;
+
 	cout << "Record Number: ";
 	cin >> searchParam;
 	cout << endl;
 
 	printCustRecord(searchParam);
+	
+	cout
+		<< "************************************\n"
+		<< "*                                  *\n"
+		<< "*  1 - Update                      *\n"
+		<< "*  2 - Delete                      *\n"
+		<< "*  2 - Delete                      *\n"
+		<< "*  8 - Search Again                *\n"
+		<< "*  9 - Main Menu                   *\n"
+		<< "*                                  *\n"
+		<< "************************************\n"
+		<< "> ";
+	cin >> opt;
+	switch(opt) {
+	case 1:
+	case 2:
+	case 9:
+		break;
+	}
 }
 void readCustData()
 {
