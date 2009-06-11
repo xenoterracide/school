@@ -70,18 +70,18 @@ int main()
 	//The main menu
 	do {
 		cout
-			<< "**********************************" << endl
-			<< "*    Quick Oil Change Station    *" << endl
-			<< "************MAIN MENU*************" << endl
-			<< "*                                *" << endl
-			<< "* 1 - Add a New Customer         *" << endl
-			<< "* 2 - Complete a Service         *" << endl
-			<< "* 3 - Search Services            *" << endl
-			<< "* 4 - Search For a Customer      *" << endl
-			<< "* 8 - Debug                      *" << endl
-			<< "* 9 - Quit                       *" << endl
-			<< "*                                *" << endl
-			<< "**********************************" << endl
+			<< "**********************************\n"
+			<< "*    Quick Oil Change Station    *\n"
+			<< "************MAIN MENU*************\n"
+			<< "*                                *\n"
+			<< "* 1 - Add a New Customer         *\n"
+			<< "* 2 - Complete a Service         *\n"
+			<< "* 3 - Search Services            *\n"
+			<< "* 4 - Search For a Customer      *\n"
+			<< "* 8 - Debug                      *\n"
+			<< "* 9 - Quit                       *\n"
+			<< "*                                *\n"
+			<< "**********************************\n"
 			<< "Please choose the service used: ";
 		cin >> userChoice;
 		cout << endl;
