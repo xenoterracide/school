@@ -316,28 +316,25 @@ void searchSerCompleted()
 
 void searchCurrentCus()
 {
-	int searchSerPref;
-	ifstream cusInFile;
+	int opt;
 //open the file to read customer information from
-	cusInFile.open("customer.txt");
 	cout
-		<< "**********CUSTOMER SEARCH***********" << endl
-		<< "*                                  *" << endl
-		<< "*  1 - First Name                  *" << endl
-		<< "*  2 - Last Name                   *" << endl
-		<< "*  3 - Plate Number                *" << endl
-		<< "*  4 - Phone Number                *" << endl
-		<< "*  5 - Date                        *" << endl
-		<< "*                                  *" << endl
-		<< "************************************" << endl
-		<< "How would you like to search for the customer?  ";
-	cin >> searchSerPref;
-	cout << endl << endl;
-	switch (searchSerPref)
+		<< "**********CUSTOMER SEARCH***********\n"
+		<< "*                                  *\n"
+		<< "*  1 - First Name                  *\n"
+		<< "*  2 - Last Name                   *\n"
+		<< "*  3 - Plate Number                *\n"
+		<< "*  4 - Phone Number                *\n"
+		<< "*  5 - Date                        *\n"
+		<< "*                                  *\n"
+		<< "************************************\n"
+		<< "How would you like to search for the customer? ";
+	cin >> opt;
+	cout << "\n"  << endl;
+	switch (opt)
 	{
 	case  1:
 		break;
-
 	case 2:
 		break;
 	case 3:
@@ -349,8 +346,6 @@ void searchCurrentCus()
 	case 6:
 		break;
 	}
-//close the customer files
-	cusInFile.close();
 }
 void readCustData()
 {
