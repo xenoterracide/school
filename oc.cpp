@@ -56,9 +56,11 @@ void debugCustVecStruct();
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
+void printCustRecord(const unsigned int& i);
 void readCustData();
 void searchSerCompleted();
 void searchCustMenu();
+void searchCustRecord();
 void writeCustData();
 
 int main()
@@ -112,15 +114,7 @@ int main()
 void debugCustVecStruct()
 {
 	for (unsigned int i = 0; i < customers.size(); i++) {
-		cout
-			<< "record: " << customers.at(i).record << "\n"
-			<< "fname:  " << customers.at(i).fname  << "\n"
-			<< "lname:  " << customers.at(i).lname  << "\n"
-			<< "home:   " << customers.at(i).home   << "\n"
-			<< "cell:   " << customers.at(i).cell   << "\n"
-			<< "work:   " << customers.at(i).work   << "\n"
-			<< "plate:  " << customers.at(i).license_plate << "\n"
-			<< endl;
+		printCustRecord(i);
 	}
 }
 /*
@@ -273,6 +267,18 @@ void getSerInfo()
 
 	serOutFile.close();
 }
+void printCustRecord(const unsigned int& i)
+{
+		cout
+			<< "record: " << customers.at(i).record << "\n"
+			<< "fname:  " << customers.at(i).fname  << "\n"
+			<< "lname:  " << customers.at(i).lname  << "\n"
+			<< "home:   " << customers.at(i).home   << "\n"
+			<< "cell:   " << customers.at(i).cell   << "\n"
+			<< "work:   " << customers.at(i).work   << "\n"
+			<< "plate:  " << customers.at(i).license_plate << "\n"
+			<< endl;
+}
 
 void searchSerCompleted()
 {
@@ -335,6 +341,7 @@ void searchCustMenu()
 	switch (opt)
 	{
 	case 1:
+		searchCustRecord();
 		break;
 	case 2:
 		break;
@@ -345,6 +352,13 @@ void searchCustMenu()
 	case 5:
 		break;
 	}
+}
+void searchCustRecord()
+{
+	int searchParam;
+	cout << "Record Number: " << endl;
+	cin >> searchParam;
+
 }
 void readCustData()
 {
