@@ -321,11 +321,11 @@ void searchCurrentCus()
 	cout
 		<< "**********CUSTOMER SEARCH***********\n"
 		<< "*                                  *\n"
-		<< "*  1 - First Name                  *\n"
-		<< "*  2 - Last Name                   *\n"
-		<< "*  3 - Plate Number                *\n"
-		<< "*  4 - Phone Number                *\n"
-		<< "*  5 - Date                        *\n"
+		<< "*  1 - Record                      *\n"
+		<< "*  2 - First Name                  *\n"
+		<< "*  3 - Last Name                   *\n"
+		<< "*  4 - Plate Number                *\n"
+		<< "*  5 - Phone Number                *\n"
 		<< "*                                  *\n"
 		<< "************************************\n"
 		<< "How would you like to search for the customer? ";
@@ -333,7 +333,7 @@ void searchCurrentCus()
 	cout << "\n"  << endl;
 	switch (opt)
 	{
-	case  1:
+	case 1:
 		break;
 	case 2:
 		break;
@@ -342,8 +342,6 @@ void searchCurrentCus()
 	case 4:
 		break;
 	case 5:
-		break;
-	case 6:
 		break;
 	}
 }
