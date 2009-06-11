@@ -335,11 +335,10 @@ void searchCurrentCus()
 }
 void readData()
 {
+	unsigned int i = 0;
 	string line = "\0";
 	string field = "\0";
-	string token;
-	stringstream iss;
-	vector<string> tmp;
+	string token = "\0";
 
 	ifstream csv;
 	csv.open("cust.csv");
@@ -349,16 +348,46 @@ void readData()
 		exit(1);
 	}
 	// extract comma delimited fields from file
-	while (!csv.eof()) {
-		getline(csv, line);
-		iss << line;
-		while ( getline(iss, token, ',') ) {
-			tmp.push_back(token);
+	while (getline(csv, line)) {
+		stringstream ss;
+		ss << line;
+		cout << "line: " << line << endl;
+		cout << "ss: " << ss << endl;
+		while ( getline(ss, token, ',')) {
+			istringstream iss;
+			switch (i) {
+			case 0:
+				iss.str(token);
+				iss >> new_customer.record;
+				break;
+			case 1:
+				new_customer.fname = token;
+				break;
+			case 2:
+				new_customer.lname = token;
+				break;
+			case 3:
+				new_customer.home = token;
+				break;
+			case 4:
+				new_customer.work = token;
+				break;
+			case 5:
+				new_customer.cell = token;
+				break;
+			case 6:
+				new_customer.license_plate = token;
+				break;
+			}
+			++i;
+			if (i == 7) {
+				i = 0;
+			}
 		}
-		iss.clear();
+		customers.push_back(new_customer);
 	}
-	csv.close();
 
+	csv.close();
 	cout << endl;
 }
 void writeData()
