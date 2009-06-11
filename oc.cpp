@@ -56,17 +56,17 @@ void debugVecStruct();
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
-void readData();
+void readCustData();
 void searchSerCompleted();
 void searchCurrentCus();
-void writeData();
+void writeCustData();
 
 int main()
 {
 	//Declare Variables
 	int userChoice;
 		
-	readData();
+	readCustData();
 	//The main menu
 	do {
 		cout
@@ -170,7 +170,7 @@ void getCusInfo()
 		cin >> confirm;
 		if (confirm == 1) {
 			customers.push_back(new_customer);
-			writeData();
+			writeCustData();
 		}
 		cout << endl << endl;
 	}
@@ -351,7 +351,7 @@ void searchCurrentCus()
 //close the customer files
 	cusInFile.close();
 }
-void readData()
+void readCustData()
 {
 	unsigned int i = 0;
 	string line = "\0";
@@ -369,8 +369,6 @@ void readData()
 	while (getline(csv, line)) {
 		stringstream ss;
 		ss << line;
-		cout << "line: " << line << endl;
-		cout << "ss: " << ss << endl;
 		while ( getline(ss, token, ',')) {
 			istringstream iss;
 			switch (i) {
@@ -404,11 +402,10 @@ void readData()
 		}
 		customers.push_back(new_customer);
 	}
-
 	csv.close();
 	cout << endl;
 }
-void writeData()
+void writeCustData()
 {
 	ofstream csv;
 	csv.open("cust.csv");
