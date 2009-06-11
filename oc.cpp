@@ -58,7 +58,7 @@ void getCusInfo();
 void getSerInfo();
 void readCustData();
 void searchSerCompleted();
-void searchCurrentCus();
+void searchCustMenu();
 void writeCustData();
 
 int main()
@@ -98,7 +98,7 @@ int main()
 			searchSerCompleted();
 			break;
 		case 4:
-			searchCurrentCus();
+			searchCustMenu();
 			break;
 		case 8:
 			debugCustVecStruct();
@@ -315,7 +315,7 @@ void searchSerCompleted()
 	serInFile.close();
 }
 
-void searchCurrentCus()
+void searchCustMenu()
 {
 	int opt;
 //open the file to read customer information from
