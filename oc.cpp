@@ -337,32 +337,41 @@ void searchCustMenu()
 {
 	int opt;
 //open the file to read customer information from
-	cout
-		<< "**********CUSTOMER SEARCH***********\n"
-		<< "*                                  *\n"
-		<< "*  1 - Record                      *\n"
-		<< "*  2 - First Name                  *\n"
-		<< "*  3 - Last Name                   *\n"
-		<< "*  4 - Plate Number                *\n"
-		<< "*  5 - Phone Number                *\n"
-		<< "*                                  *\n"
-		<< "************************************\n"
-		<< "How would you like to search for the customer? ";
-	cin >> opt;
-	cout << "\n"  << endl;
-	switch (opt)
-	{
-	case 1:
-		searchCustRecord();
-		break;
-	case 2:
-		break;
-	case 3:
-		break;
-	case 4:
-		break;
-	case 5:
-		break;
+	while (1) {
+		cout
+			<< "**********CUSTOMER SEARCH***********\n"
+			<< "*                                  *\n"
+			<< "*  1 - Record                      *\n"
+			<< "*  2 - First Name                  *\n"
+			<< "*  3 - Last Name                   *\n"
+			<< "*  4 - Plate Number                *\n"
+			<< "*  5 - Phone Number                *\n"
+			<< "*  7 - Back                        *\n"
+			<< "*  8 - Main Menu                   *\n"
+			<< "*  9 - Quit                        *\n"
+			<< "*                                  *\n"
+			<< "************************************\n"
+			<< "> ";
+		cin >> opt;
+		cout << "\n"  << endl;
+		switch (opt) {
+		case 1:
+			searchCustRecord();
+			break;
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			continue;
+		case 7:
+		case 8:
+			mainMenu();
+			break;
+		case 9:
+			exit(0);
+			break;
+		}
 	}
 }
 void searchCustRecord()
