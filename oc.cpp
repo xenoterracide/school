@@ -269,15 +269,19 @@ void getSerInfo()
 }
 void printCustRecord(const unsigned int& i)
 {
-		cout
-			<< "record: " << customers.at(i).record << "\n"
-			<< "fname:  " << customers.at(i).fname  << "\n"
-			<< "lname:  " << customers.at(i).lname  << "\n"
-			<< "home:   " << customers.at(i).home   << "\n"
-			<< "cell:   " << customers.at(i).cell   << "\n"
-			<< "work:   " << customers.at(i).work   << "\n"
-			<< "plate:  " << customers.at(i).license_plate << "\n"
-			<< endl;
+		if (i > customers.size()) {
+			cout << "No Customer Record Found\n" << endl;
+		} else {
+			cout
+				<< "record: " << customers.at(i).record << "\n"
+				<< "fname:  " << customers.at(i).fname  << "\n"
+				<< "lname:  " << customers.at(i).lname  << "\n"
+				<< "home:   " << customers.at(i).home   << "\n"
+				<< "cell:   " << customers.at(i).cell   << "\n"
+				<< "work:   " << customers.at(i).work   << "\n"
+				<< "plate:  " << customers.at(i).license_plate << "\n"
+				<< endl;
+		}
 }
 
 void searchSerCompleted()
