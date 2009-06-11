@@ -52,7 +52,7 @@ struct customer_record
 
 vector<customer_record> customers;
 
-void debugVecStruct();
+void debugCustVecStruct();
 void garbageDataHandler();
 void getCusInfo();
 void getSerInfo();
@@ -101,14 +101,15 @@ int main()
 			searchCurrentCus();
 			break;
 		case 8:
-			debugVecStruct();
+			debugCustVecStruct();
 			break;
 		}
 	} while (userChoice != 9);
 	return 0;
 }
 
-void debugVecStruct()
+// basically were' just printing the array to stdout
+void debugCustVecStruct()
 {
 	for (unsigned int i = 0; i < customers.size(); i++) {
 		cout
