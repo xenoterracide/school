@@ -1,0 +1,14 @@
+Caleb Cushing
+System's Architecture
+Assignment #5
+
+802.11		802.16
+range 100m	7-10km (up to 50km)
+54Mbps		100Mbps
+
+Error Correction is achieved using forward error correction (FEC). 2 codes, 
+convolution code (CC) and low density parity check code (LDPC) are consiered 
+for this purpose.
+
+802.16 will likely not replace 802.11 as it was designed for carriers and not 
+consumers. it isn't cheap and hasn't been widely deployed yet.
