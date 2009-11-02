@@ -10,3 +10,30 @@ computational power.
 13. What is a multicore processor? what are it's advantages compared to 
 multi-cpu architecture? why have multicore processors only recently become 
 available?
+
+Pick 1 of Ch6 research problems (pg 258) and pick 1 of Ch7 research problems 
+(pg 300)
+
+ch6
+1. Investigate the implementation of modern PC buses such as the Peripheral 
+Component Interconnect (PCI) bus. How wide are the data and address buses? what 
+is the clock rate? what is the maximum data transfer rate? what is the set of 
+commands and command responses? how is peer-to-peer capability implemented?  
+what is the bus arbitration strategy?
+
+2. Fibre Channel is a relatively recent bus standard for high-speed connection 
+to storage devices. it is current used to implement high speed storage arrays 
+where storage devices are separated by large distances.
+it can also enable multiple computer system to share access to a single storage 
+device or array. investigate teh implementation details of the fibre channel 
+standard. what are its strengths and weaknesses as compared to the ultra640 and 
+serial-attached scsi? which would be used in a typical lan environment? which 
+would be used in a distributed transaction-processing environment?
+
+3. Most IBM-compatible PCs use secondary storage devices based on one of the 
+IDE/ATA standards. investigate those standards and compare them to lower cost 
+scsi standards such as scsi-3. which standard is the best choice for an average 
+home or office workstation? which standard is the best choice for high-end 
+workstations such as those used by engineers and music producers? which 
+standard is the best choice for a pc-based server used to share files and 
+databases on an office network.
