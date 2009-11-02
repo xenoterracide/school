@@ -1,0 +1,32 @@
+Caleb Cushing
+System's Architecture
+Assignment #4
+
+32 or 64-bit bus width and memory addresses.
+Clock is 33.33 MHz w/ synchronous transfers
+peak transfer of 133MB's
+
+C/BE[3:0]#	Command Types
+0000	Interrupt Acknowledge
+0001	Special Cycle
+0010	I/O Read
+0011	I/O Write
+0100	Reserved
+0101	Reserved
+0110	Memory Read
+0111	Memory Write
+1000	Reserved
+1001	Reserved
+1010	Configuration Read
+1011	Configuration Write
+1100	Memory Read Multiple
+1101	Dual Address Cycle
+1110	Memory Read Line
+1111	Memory Write and Invalidate
+
+p2p is implemented via a transaction model when a master get's control via 
+arbitration it starts a transaction and communicates with another device. see 
+page 22 in pci express system architecture for more information.
+
+the bus arbitration strategy decides when a device has control of the bus.  
+there are varying strategies.strategies
