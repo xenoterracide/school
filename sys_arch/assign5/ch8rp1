@@ -1,0 +1,9 @@
+Caleb Cushing
+System's Architecture
+Assignment #5
+
+Hamming Code is the usual implementation. it allows single bit error correction 
+and double-bit errors to be detected. Errors are detected by checking the 
+parity bit. if the error is a single bit it will be corrected, errors larger 
+than this can crash the system. workstations, and more importantly servers 
+should use ecc due to there importance and uptime
