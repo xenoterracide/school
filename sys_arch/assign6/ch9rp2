@@ -1,0 +1,13 @@
+Caleb Cushing
+System's Architecture
+Assignment #6
+
+the primary benfit is to eliminate dependance on data link layer technology, 
+such as ATM, Frame Relay, SONET or Ethernet, and eliminate the need for 
+multiple later 2 networks to satisfy different types of traffic.  they solve 
+them by allowing packets to be switched accoriding to a label, and it was 
+designed to be used by circuit based and packet switching clients. it is 
+considered to lie between layer 2 and layer 3. it is standardized in RFC 3031.  
+cisco most likely makes products that mostly comply to it. however, most 
+standards are not 100% complied to, and it becomes hard to verify when a 
+product claims to use something.
