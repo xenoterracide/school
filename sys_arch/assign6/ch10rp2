@@ -1,0 +1,5 @@
+Caleb Cushing
+System's Architecture
+Assignment #6
+
+QT SDK. Applications are Compiled as the SDK's focus is on QT/C++. it provides a built in editor and gui builder. it supports gdb for debugging (you can of course run external debugger tools). All DB's that C++ and QT can access are supported however the IDE does not do any of the heavy lifting for you meaning you have to code all such connections by hand.
