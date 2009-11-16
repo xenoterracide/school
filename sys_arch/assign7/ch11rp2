@@ -1,0 +1,7 @@
+Caleb Cushing
+System's Architecture
+Assignment #7
+
+solaris uses virtual memory and paging which keeps the processes from sharing 
+memory between users, which also keeps them from corrupting each others memory 
+and causing crashes that way.
