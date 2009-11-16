@@ -1,0 +1,18 @@
+1. Given that the tools are proprietary the company shouldn't invest money 
+further in the system. Instead it should focus on finding a data migration tool 
+or paying someone to migrate the data (which shouldn't be too overwhelming a 
+task given the files are flat files). I would suggest going with a web 
+framework or cms that is capable of doing what they need to do, preferrably and 
+open source one so they aren't locked into a proprietary system in the future.  
+I would expect that. If they used a framework like Perl's Catalyst they could 
+possibly interface directly to these flat files.
+
+2. Over a period of time they should try to replace the technology, however 
+doing it all at once is unlikely to be productive or profitable. They should 
+also only reimplement what they need, if they can find a technology to replace 
+it in place and port the data to it, it might be even cheaper.
+
+3. depending on how they acquire new tools they could run the risk of using 
+another software who's company could go bankrupt. They could incur an excessive 
+amount of expense developing a new system which turns out not to be as good as 
+the last or buggy.
