@@ -1,0 +1,10 @@
+Caleb Cushing
+System's Architecture
+Assignment #7
+
+IBM uses chipkill which spreads out bit lines from a single memory chip over 
+multiple ECC checkers. To avoid uncorrectable errors in memory, IBM uses a 
+dynamic spare memory scheme called “redundant bit-steering.” this includes 
+spare memobery bits within each ECC word so if a bit goes bad it can be steered 
+to a new bit for use.
+
