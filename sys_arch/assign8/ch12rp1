@@ -1,0 +1,28 @@
+Caleb Cushing
+System's Architecture
+Assignment #8
+
+z/OS the most recent descendant of MVS supports several kinds of data sets that 
+it uses for a file system. these data sets are not all that different from and 
+RDBMS.
+
+	In a sequential data set, records are data items that are stored 
+consecutively.  To retrieve the tenth item in the data set, for example, the 
+system must first pass the preceding nine items. Data items that must all be 
+used in sequence, like the alphabetical list of names in a classroom roster, 
+are best stored in a sequential data set.
+
+	A partitioned data set or PDS consists of a directory and members. The 
+directory holds the address of each member and thus makes it possible for 
+programs or the operating system to access each member directly. Each member, 
+however, consists of sequentially stored records. Partitioned data sets are 
+often called libraries. Programs are stored as members of partitioned data 
+sets. Generally, the operating system loads the members of a PDS into storage 
+sequentially, but it can access members directly when selecting a program for 
+execution.
+
+	In a Virtual Storage Access Method (VSAM) key sequenced data set (KSDS), 
+records are data items that are stored with control information (keys) so that 
+the system can retrieve an item without searching all preceding items in the 
+data set. VSAM KSDS data sets are ideal for data items that are used frequently 
+and in an unpredictable order. 
