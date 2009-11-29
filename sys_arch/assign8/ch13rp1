@@ -1,0 +1,9 @@
+Caleb Cushing
+System's Architecture
+Assignment #8
+
+Kerberos has a single point of failure. if the server is down no one can log in 
+or if it's compromised all accounts are compromised. Kerberos requires an 
+Authentication Server, Service Server, and a Ticket Granting Server. Kerberos 
+provides a Moderate level of security, and only truly covers the authentication 
+portion of distributed applictions and resources.
