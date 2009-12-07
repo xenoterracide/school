@@ -1,0 +1,9 @@
+Caleb Cushing
+System's Architecture
+Assignment #9
+
+in short all firewall products are suitable for #1 and #2 questions. In fact 
+depending on the traffic quantity requirements, all firewalls could fullfill 
+these requirements. given that the 3rd question suggests a large bandwidth 
+requirement I'm suggesting these firewalls, ASA5505 for 1 5510 for 2 and 5520 
+for 3.
