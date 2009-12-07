@@ -1,0 +1,6 @@
+bonnie++ tests hardware and filesystem performance, including read/write, 
+indexing and caching results. it does not truly try to replicate a specific 
+application or task it is merely a stress test of reads and writes to a 
+filesystem it is suitable for comparing all sizes of computers that support it 
+and is most useful in comparing performance between systems, drives and 
+filesystems.
